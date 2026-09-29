@@ -983,13 +983,11 @@ footer {
 
 .result-card {
     position: relative;
-
     padding: 30px;
 
     background: var(--bg-card);
 
     border: 1px solid var(--border);
-
     border-radius: 16px;
 
     overflow: hidden;
