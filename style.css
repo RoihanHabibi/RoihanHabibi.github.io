@@ -341,9 +341,21 @@ section:not(.hero) h2 {
 }
 
 .project p {
-    color: var(--muted);
+.project-link {
+    margin-top: 22px;
 
-    font-size: 14px;
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.project:hover .project-link {
+    transform: translateX(5px);
+}
 }
 
 
