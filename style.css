@@ -772,3 +772,200 @@ footer {
     }
 
 }
+
+/* =========================================
+   MONITORING EVIDENCE
+========================================= */
+
+.evidence-block {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 45px;
+    align-items: center;
+
+    margin-top: 55px;
+    padding: 28px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.evidence-block:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.evidence-block.reverse {
+    grid-template-columns: 1.5fr 0.8fr;
+}
+
+.evidence-block.reverse .evidence-text {
+    order: 2;
+}
+
+.evidence-block.reverse img {
+    order: 1;
+}
+
+.evidence-text {
+    padding: 10px;
+}
+
+.evidence-number {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.evidence-text h3 {
+    margin: 0 0 15px;
+
+    font-size: 26px;
+}
+
+.evidence-text p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.evidence-block img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--border);
+
+    background: #111827;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   ALERTING
+========================================= */
+
+.alert-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.alert-card {
+    overflow: hidden;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.alert-card:hover {
+    border-color: var(--accent);
+
+    transform: translateY(-5px);
+}
+
+.alert-card img {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.alert-content {
+    padding: 25px;
+}
+
+.alert-content > span {
+    color: var(--accent);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.alert-content h3 {
+    margin: 12px 0;
+
+    font-size: 22px;
+}
+
+.alert-content p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .evidence-block,
+    .evidence-block.reverse {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .evidence-block.reverse .evidence-text,
+    .evidence-block.reverse img {
+        order: initial;
+    }
+
+    .alert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alert-card img {
+        height: auto;
+    }
+
+}
