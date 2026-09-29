@@ -25,7 +25,9 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
     <nav>
 
@@ -56,7 +58,10 @@
     </nav>
 
 
-    <!-- PROJECT HEADER -->
+
+    <!-- =========================
+         PROJECT HEADER
+    ========================== -->
 
     <section class="project-detail">
 
@@ -66,7 +71,7 @@
 
         <h1>
             Infrastructure Monitoring
-            <span>& Automation</span>
+            <span>&amp; Automation</span>
         </h1>
 
         <p class="project-intro">
@@ -79,40 +84,24 @@
         </p>
 
 
-        <!-- TECHNOLOGIES -->
-
         <div class="tags">
 
-            <span>
-                RHV
-            </span>
-
-            <span>
-                Zabbix
-            </span>
-
-            <span>
-                Grafana
-            </span>
-
-            <span>
-                Python
-            </span>
-
-            <span>
-                Ansible
-            </span>
-
-            <span>
-                Telegram
-            </span>
+            <span>RHV</span>
+            <span>Zabbix</span>
+            <span>Grafana</span>
+            <span>Python</span>
+            <span>Ansible</span>
+            <span>Telegram</span>
 
         </div>
 
     </section>
 
 
-    <!-- OVERVIEW -->
+
+    <!-- =========================
+         01 — OVERVIEW
+    ========================== -->
 
     <section class="project-section">
 
@@ -140,7 +129,10 @@
     </section>
 
 
-    <!-- PROBLEM -->
+
+    <!-- =========================
+         02 — PROBLEM
+    ========================== -->
 
     <section class="project-section">
 
@@ -172,7 +164,10 @@
     </section>
 
 
-    <!-- ARCHITECTURE -->
+
+    <!-- =========================
+         03 — ARCHITECTURE
+    ========================== -->
 
     <section class="project-section">
 
@@ -212,7 +207,7 @@
             </div>
 
             <div class="architecture-item">
-                Python Monitoring & Alerting
+                Python Monitoring &amp; Alerting
             </div>
 
             <div class="arrow">
@@ -236,7 +231,10 @@
     </section>
 
 
-    <!-- IMPLEMENTATION -->
+
+    <!-- =========================
+         04 — IMPLEMENTATION
+    ========================== -->
 
     <section class="project-section">
 
@@ -341,360 +339,424 @@
     </section>
 
 
-    <!-- MONITORING EVIDENCE -->
 
-<section class="project-section">
-
-    <p class="section-label">
-        05 — MONITORING EVIDENCE
-    </p>
-
-    <h2>
-        Monitoring & Infrastructure
-    </h2>
-
-    <p>
-        The monitoring environment was implemented across the
-        virtualized infrastructure using Red Hat Virtualization,
-        Zabbix and Grafana. The dashboards provide visibility into
-        host availability, CPU utilization, memory usage, storage
-        and network activity.
-    </p>
-
-
-    <!-- RHV -->
-
-    <div class="evidence-block">
-
-        <div class="evidence-text">
-
-            <span class="evidence-number">
-                01
-            </span>
-
-            <h3>
-                Virtual Infrastructure
-            </h3>
-
-            <p>
-                Red Hat Virtualization was used as the virtualization
-                platform to manage the virtual machines monitored
-                throughout the environment.
-            </p>
-
-        </div>
-
-        <img
-            src="../images/rhv-vm.png"
-            alt="Red Hat Virtualization virtual machines"
-        >
-
-    </div>
-
-
-    <!-- ZABBIX HOSTS -->
-
-    <div class="evidence-block reverse">
-
-        <div class="evidence-text">
-
-            <span class="evidence-number">
-                02
-            </span>
-
-            <h3>
-                Zabbix Host Monitoring
-            </h3>
-
-            <p>
-                Zabbix was configured to monitor multiple hosts and
-                collect infrastructure metrics including system
-                availability, CPU, memory, storage and network data.
-            </p>
-
-        </div>
-
-        <img
-            src="../images/zabbix-hosts.png"
-            alt="Zabbix hosts monitoring"
-        >
-
-    </div>
-
-
-    <!-- ZABBIX DASHBOARD -->
-
-    <div class="evidence-block">
-
-        <div class="evidence-text">
-
-            <span class="evidence-number">
-                03
-            </span>
-
-            <h3>
-                Infrastructure Dashboard
-            </h3>
-
-            <p>
-                The Zabbix dashboard provides a centralized view of
-                host availability, active problems, trigger severity
-                and system information.
-            </p>
-
-        </div>
-
-        <img
-            src="../images/zabbix-dashboard.png"
-            alt="Zabbix infrastructure dashboard"
-        >
-
-    </div>
-
-
-    <!-- GRAFANA -->
-
-    <div class="evidence-block reverse">
-
-        <div class="evidence-text">
-
-            <span class="evidence-number">
-                04
-            </span>
-
-            <h3>
-                Grafana Visualization
-            </h3>
-
-            <p>
-                Grafana was used to visualize infrastructure metrics
-                through dashboards covering CPU utilization, available
-                memory, disk usage and network traffic.
-            </p>
-
-        </div>
-
-        <img
-            src="../images/grafana-dashboard.png"
-            alt="Grafana infrastructure monitoring dashboard"
-        >
-
-    </div>
-
-
-    <!-- GRAFANA HOST -->
-
-    <div class="evidence-block">
-
-        <div class="evidence-text">
-
-            <span class="evidence-number">
-                05
-            </span>
-
-            <h3>
-                Host-Level Metrics
-            </h3>
-
-            <p>
-                Detailed host-level dashboards were used to inspect
-                resource utilization and performance trends.
-            </p>
-
-        </div>
-
-        <img
-            src="../images/grafana-host.png"
-            alt="Grafana host monitoring dashboard"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- ALERTING & AUTOMATION -->
-
-<section class="project-section">
-
-    <p class="section-label">
-        06 — ALERTING & AUTOMATION
-    </p>
-
-    <h2>
-        Automated Alerting
-    </h2>
-
-    <p>
-        Monitoring events were connected with custom notification
-        and automation workflows. Infrastructure conditions could
-        trigger Telegram notifications and operational actions.
-    </p>
-
-
-    <div class="alert-grid">
-
-
-        <div class="alert-card">
-
-            <img
-                src="../images/high-cpu-warning.png"
-                alt="High CPU utilization warning"
-            >
-
-            <div class="alert-content">
-
-                <span>
-                    ZABBIX TRIGGER
-                </span>
-
-                <h3>
-                    High CPU Detection
-                </h3>
-
-                <p>
-                    A warning was generated when CPU utilization
-                    exceeded the configured threshold.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="alert-card">
-
-            <img
-                src="../images/telegram-notification.jpg"
-                alt="Telegram infrastructure notification"
-            >
-
-            <div class="alert-content">
-
-                <span>
-                    TELEGRAM ALERT
-                </span>
-
-                <h3>
-                    Automated Notification
-                </h3>
-
-                <p>
-                    Monitoring events were delivered through Telegram
-                    to provide immediate operational notification.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- RESULT -->
-
-<section class="project-section">
-
-    <p class="section-label">
-        07 — RESULT
-    </p>
-
-    <h2>
-        What I Built
-    </h2>
-
-    <p>
-        The project combined infrastructure monitoring, visualization,
-        alerting and automation into a single operational workflow.
-        The implementation was designed to reduce repetitive manual
-        checks and provide faster visibility when infrastructure
-        conditions changed.
-    </p>
-
-
-    <div class="result-grid">
-
-        <div class="result-card">
-
-            <span>01</span>
-
-            <h3>
-                Centralized Monitoring
-            </h3>
-
-            <p>
-                Built a monitoring environment using Zabbix
-                to collect and monitor server availability,
-                CPU, memory, storage and network metrics.
-            </p>
-
-        </div>
-
-
-        <div class="result-card">
-
-            <span>02</span>
-
-            <h3>
-                Infrastructure Visualization
-            </h3>
-
-            <p>
-                Integrated Grafana dashboards to provide a
-                centralized view of infrastructure performance
-                and resource utilization.
-            </p>
-
-        </div>
-
-
-        <div class="result-card">
-
-            <span>03</span>
-
-            <h3>
-                Automated Alerting
-            </h3>
-
-            <p>
-                Developed monitoring and notification logic
-                that sends infrastructure warnings to Telegram
-                when defined conditions are detected.
-            </p>
-
-        </div>
-
-
-        <div class="result-card">
-
-            <span>04</span>
-
-            <h3>
-                Infrastructure Automation
-            </h3>
-
-            <p>
-                Implemented Ansible playbooks to automate
-                operational tasks and reduce repetitive
-                manual intervention.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- TECHNOLOGIES -->
+    <!-- =========================
+         05 — MONITORING EVIDENCE
+    ========================== -->
 
     <section class="project-section">
 
         <p class="section-label">
-            06 — TECHNOLOGIES
+            05 — MONITORING EVIDENCE
+        </p>
+
+        <h2>
+            Monitoring &amp; Infrastructure
+        </h2>
+
+        <p>
+
+            The monitoring environment was implemented across the
+            virtualized infrastructure using Red Hat Virtualization,
+            Zabbix and Grafana. The dashboards provide visibility into
+            host availability, CPU utilization, memory usage, storage
+            and network activity.
+
+        </p>
+
+
+
+        <!-- RHV -->
+
+        <div class="evidence-block">
+
+            <div class="evidence-text">
+
+                <span class="evidence-number">
+                    01
+                </span>
+
+                <h3>
+                    Virtual Infrastructure
+                </h3>
+
+                <p>
+
+                    Red Hat Virtualization was used as the virtualization
+                    platform to manage the virtual machines monitored
+                    throughout the environment.
+
+                </p>
+
+            </div>
+
+
+            <img
+                src="../images/rhv-vm.png"
+                alt="Red Hat Virtualization virtual machines"
+            >
+
+        </div>
+
+
+
+        <!-- ZABBIX HOSTS -->
+
+        <div class="evidence-block reverse">
+
+            <div class="evidence-text">
+
+                <span class="evidence-number">
+                    02
+                </span>
+
+                <h3>
+                    Zabbix Host Monitoring
+                </h3>
+
+                <p>
+
+                    Zabbix was configured to monitor multiple hosts and
+                    collect infrastructure metrics including system
+                    availability, CPU, memory, storage and network data.
+
+                </p>
+
+            </div>
+
+
+            <img
+                src="../images/zabbix-hosts.png"
+                alt="Zabbix hosts monitoring"
+            >
+
+        </div>
+
+
+
+        <!-- ZABBIX DASHBOARD -->
+
+        <div class="evidence-block">
+
+            <div class="evidence-text">
+
+                <span class="evidence-number">
+                    03
+                </span>
+
+                <h3>
+                    Infrastructure Dashboard
+                </h3>
+
+                <p>
+
+                    The Zabbix dashboard provides a centralized view of
+                    host availability, active problems, trigger severity
+                    and system information.
+
+                </p>
+
+            </div>
+
+
+            <img
+                src="../images/zabbix-dashboard.png"
+                alt="Zabbix infrastructure dashboard"
+            >
+
+        </div>
+
+
+
+        <!-- GRAFANA -->
+
+        <div class="evidence-block reverse">
+
+            <div class="evidence-text">
+
+                <span class="evidence-number">
+                    04
+                </span>
+
+                <h3>
+                    Grafana Visualization
+                </h3>
+
+                <p>
+
+                    Grafana was used to visualize infrastructure metrics
+                    through dashboards covering CPU utilization, available
+                    memory, disk usage and network traffic.
+
+                </p>
+
+            </div>
+
+
+            <img
+                src="../images/grafana-dashboard.png"
+                alt="Grafana infrastructure monitoring dashboard"
+            >
+
+        </div>
+
+
+
+        <!-- GRAFANA HOST -->
+
+        <div class="evidence-block">
+
+            <div class="evidence-text">
+
+                <span class="evidence-number">
+                    05
+                </span>
+
+                <h3>
+                    Host-Level Metrics
+                </h3>
+
+                <p>
+
+                    Detailed host-level dashboards were used to inspect
+                    resource utilization and performance trends.
+
+                </p>
+
+            </div>
+
+
+            <img
+                src="../images/grafana-host.png"
+                alt="Grafana host monitoring dashboard"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         06 — ALERTING
+    ========================== -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            06 — ALERTING &amp; AUTOMATION
+        </p>
+
+        <h2>
+            Automated Alerting
+        </h2>
+
+        <p>
+
+            Monitoring events were connected with custom notification
+            and automation workflows. Infrastructure conditions could
+            trigger Telegram notifications and operational actions.
+
+        </p>
+
+
+        <div class="alert-grid">
+
+
+            <div class="alert-card">
+
+                <img
+                    src="../images/high-cpu-warning.png"
+                    alt="High CPU utilization warning"
+                >
+
+                <div class="alert-content">
+
+                    <span>
+                        ZABBIX TRIGGER
+                    </span>
+
+                    <h3>
+                        High CPU Detection
+                    </h3>
+
+                    <p>
+
+                        A warning was generated when CPU utilization
+                        exceeded the configured threshold.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="alert-card">
+
+                <img
+                    src="../images/telegram-notification.jpg"
+                    alt="Telegram infrastructure notification"
+                >
+
+                <div class="alert-content">
+
+                    <span>
+                        TELEGRAM ALERT
+                    </span>
+
+                    <h3>
+                        Automated Notification
+                    </h3>
+
+                    <p>
+
+                        Monitoring events were delivered through Telegram
+                        to provide immediate operational notification.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         07 — RESULT
+    ========================== -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            07 — RESULT
+        </p>
+
+        <h2>
+            What I Built
+        </h2>
+
+        <p>
+
+            The project combined infrastructure monitoring,
+            visualization, alerting and automation into a single
+            operational workflow. The implementation was designed
+            to reduce repetitive manual checks and provide faster
+            visibility when infrastructure conditions changed.
+
+        </p>
+
+
+        <div class="implementation-grid">
+
+
+            <div class="implementation-card">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Centralized Monitoring
+                </h3>
+
+                <p>
+
+                    Built a monitoring environment using Zabbix
+                    to collect and monitor server availability,
+                    CPU, memory, storage and network metrics.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="implementation-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Infrastructure Visualization
+                </h3>
+
+                <p>
+
+                    Integrated Grafana dashboards to provide a
+                    centralized view of infrastructure performance
+                    and resource utilization.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="implementation-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Automated Alerting
+                </h3>
+
+                <p>
+
+                    Developed monitoring and notification logic
+                    that sends infrastructure warnings to Telegram
+                    when defined conditions are detected.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="implementation-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Infrastructure Automation
+                </h3>
+
+                <p>
+
+                    Implemented Ansible playbooks to automate
+                    operational tasks and reduce repetitive
+                    manual intervention.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         08 — TECHNOLOGIES
+    ========================== -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            08 — TECHNOLOGIES
         </p>
 
         <h2>
@@ -741,17 +803,19 @@
     </section>
 
 
-    <!-- BACK -->
+
+    <!-- =========================
+         BACK
+    ========================== -->
 
     <section class="project-back">
 
         <a href="../index.html#projects">
-
             ← Back to Projects
-
         </a>
 
     </section>
+
 
 
     <footer>
