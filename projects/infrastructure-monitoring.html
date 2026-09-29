@@ -5,200 +5,452 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Infrastructure Monitoring | Roihan Habibi</title>
+    <title>
+        Infrastructure Monitoring & Automation | Roihan Habibi
+    </title>
 
-    <link rel="stylesheet"
-          href="../style.css">
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
 
 </head>
 
 
 <body>
 
-<nav>
 
-    <div class="logo">
-        RH<span>.</span>
-    </div>
+    <!-- NAVIGATION -->
 
-    <div class="nav-links">
+    <nav>
 
-        <a href="../index.html">
-            Home
-        </a>
+        <div class="logo">
+            RH<span>.</span>
+        </div>
 
-        <a href="../index.html#projects">
-            Projects
-        </a>
+        <div class="nav-links">
 
-        <a href="../index.html#skills">
-            Skills
-        </a>
+            <a href="../index.html#about">
+                About
+            </a>
 
-        <a href="../index.html#contact">
-            Contact
-        </a>
+            <a href="../index.html#projects">
+                Projects
+            </a>
 
-    </div>
+            <a href="../index.html#skills">
+                Skills
+            </a>
 
-</nav>
+            <a href="../index.html#contact">
+                Contact
+            </a>
 
+        </div>
 
-<section class="project-detail">
-
-    <p class="section-label">
-        PROJECT 01
-    </p>
-
-    <h1>
-        Infrastructure Monitoring
-        & Automation
-    </h1>
-
-    <p class="project-intro">
-
-        Infrastructure monitoring and automation environment
-        designed to monitor server resources, visualize
-        infrastructure metrics and automate operational tasks.
-
-    </p>
+    </nav>
 
 
-    <div class="project-tags">
+    <!-- PROJECT HEADER -->
 
-        <span>Zabbix</span>
-        <span>Grafana</span>
-        <span>Python</span>
-        <span>Ansible</span>
-        <span>Telegram</span>
+    <section class="project-detail">
 
-    </div>
+        <p class="section-label">
+            PROJECT 01 — INFRASTRUCTURE
+        </p>
+
+        <h1>
+            Infrastructure Monitoring
+            <span>& Automation</span>
+        </h1>
+
+        <p class="project-intro">
+
+            Infrastructure monitoring and automation environment
+            designed to monitor server resources, visualize
+            infrastructure metrics, generate alerts, and automate
+            operational tasks.
+
+        </p>
 
 
-    <div class="detail-section">
+        <!-- TECHNOLOGIES -->
 
-        <h2>Overview</h2>
+        <div class="tags">
+
+            <span>
+                RHV
+            </span>
+
+            <span>
+                Zabbix
+            </span>
+
+            <span>
+                Grafana
+            </span>
+
+            <span>
+                Python
+            </span>
+
+            <span>
+                Ansible
+            </span>
+
+            <span>
+                Telegram
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- OVERVIEW -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Project Overview
+        </h2>
 
         <p>
 
             This project focuses on building an infrastructure
-            monitoring and automation environment using Zabbix
-            and Grafana for monitoring, Python for automation
-            and Telegram for notifications.
+            monitoring and automation environment for virtualized
+            servers.
+
+            The environment combines Zabbix for monitoring,
+            Grafana for visualization, Python for custom monitoring
+            logic and Telegram notifications, and Ansible for
+            automated server operations.
 
         </p>
 
-    </div>
+    </section>
 
 
-    <div class="detail-section">
+    <!-- PROBLEM -->
 
-        <h2>Architecture</h2>
+    <section class="project-section">
+
+        <p class="section-label">
+            02 — PROBLEM
+        </p>
+
+        <h2>
+            Problem
+        </h2>
+
+        <p>
+
+            Infrastructure monitoring can become difficult when
+            administrators need to continuously check server
+            resource usage and manually perform repetitive
+            operational tasks.
+
+        </p>
+
+        <p>
+
+            The goal of this project was to create a centralized
+            monitoring workflow and introduce automation for
+            common infrastructure operations.
+
+        </p>
+
+    </section>
+
+
+    <!-- ARCHITECTURE -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            03 — ARCHITECTURE
+        </p>
+
+        <h2>
+            Infrastructure Architecture
+        </h2>
+
 
         <div class="architecture">
 
-            <div>RHV Host</div>
+            <div class="architecture-item">
+                RHV / Virtual Infrastructure
+            </div>
 
-            <div>↓</div>
+            <div class="arrow">
+                ↓
+            </div>
 
-            <div>Zabbix</div>
+            <div class="architecture-item">
+                Zabbix Monitoring
+            </div>
 
-            <div>↓</div>
+            <div class="arrow">
+                ↓
+            </div>
 
-            <div>Grafana</div>
+            <div class="architecture-item">
+                Grafana Visualization
+            </div>
 
-            <div>↓</div>
+            <div class="arrow">
+                ↓
+            </div>
 
-            <div>Python Monitoring</div>
+            <div class="architecture-item">
+                Python Monitoring & Alerting
+            </div>
 
-            <div>↓</div>
+            <div class="arrow">
+                ↓
+            </div>
 
-            <div>Telegram</div>
+            <div class="architecture-item">
+                Telegram Notification
+            </div>
 
-            <div>↓</div>
+            <div class="arrow">
+                ↓
+            </div>
 
-            <div>Ansible</div>
+            <div class="architecture-item">
+                Ansible Automation
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="detail-section">
+    <!-- IMPLEMENTATION -->
 
-        <h2>Technologies</h2>
+    <section class="project-section">
 
-        <ul>
+        <p class="section-label">
+            04 — IMPLEMENTATION
+        </p>
 
-            <li>Zabbix 7</li>
-
-            <li>Grafana</li>
-
-            <li>Python</li>
-
-            <li>Ansible</li>
-
-            <li>Telegram Bot</li>
-
-            <li>Linux</li>
-
-            <li>Red Hat Virtualization</li>
-
-        </ul>
-
-    </div>
+        <h2>
+            Implementation
+        </h2>
 
 
-    <div class="detail-section">
-
-        <h2>Key Features</h2>
-
-        <ul>
-
-            <li>
-                Server CPU and memory monitoring
-            </li>
-
-            <li>
-                Grafana dashboard visualization
-            </li>
-
-            <li>
-                Telegram notification system
-            </li>
-
-            <li>
-                Automated server operations using Ansible
-            </li>
-
-            <li>
-                Python-based monitoring logic
-            </li>
-
-        </ul>
-
-    </div>
+        <div class="implementation-grid">
 
 
-    <a href="../index.html#projects"
-       class="back-button">
+            <div class="implementation-card">
 
-        ← Back to Projects
+                <span>
+                    01
+                </span>
 
-    </a>
+                <h3>
+                    Monitoring
+                </h3>
+
+                <p>
+
+                    Zabbix was configured to monitor infrastructure
+                    metrics including CPU utilization, memory
+                    availability and system status.
+
+                </p>
+
+            </div>
 
 
-</section>
+            <div class="implementation-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Visualization
+                </h3>
+
+                <p>
+
+                    Grafana was integrated with monitoring data to
+                    provide centralized dashboards for infrastructure
+                    visibility.
+
+                </p>
+
+            </div>
 
 
-<footer>
+            <div class="implementation-card">
 
-    © 2026 Roihan Habibi
+                <span>
+                    03
+                </span>
 
-</footer>
+                <h3>
+                    Alerting
+                </h3>
+
+                <p>
+
+                    Python-based monitoring logic was used to process
+                    infrastructure conditions and send notifications
+                    through Telegram.
+
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Automation
+                </h3>
+
+                <p>
+
+                    Ansible playbooks were used to automate operational
+                    tasks such as server reboot and infrastructure
+                    management operations.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            05 — RESULT
+        </p>
+
+        <h2>
+            Result
+        </h2>
+
+
+        <div class="result-list">
+
+            <div>
+                ✓ Centralized infrastructure monitoring
+            </div>
+
+            <div>
+                ✓ Real-time infrastructure visualization
+            </div>
+
+            <div>
+                ✓ Automated Telegram notifications
+            </div>
+
+            <div>
+                ✓ Automated server operations
+            </div>
+
+            <div>
+                ✓ Reduced repetitive manual operations
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECHNOLOGIES -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            06 — TECHNOLOGIES
+        </p>
+
+        <h2>
+            Technologies Used
+        </h2>
+
+
+        <div class="tech-grid">
+
+            <span>
+                Red Hat Virtualization
+            </span>
+
+            <span>
+                Zabbix
+            </span>
+
+            <span>
+                Grafana
+            </span>
+
+            <span>
+                Python
+            </span>
+
+            <span>
+                Ansible
+            </span>
+
+            <span>
+                Telegram Bot
+            </span>
+
+            <span>
+                Linux
+            </span>
+
+            <span>
+                SSH
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <section class="project-back">
+
+        <a href="../index.html#projects">
+
+            ← Back to Projects
+
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Roihan Habibi
+
+    </footer>
 
 
 </body>
