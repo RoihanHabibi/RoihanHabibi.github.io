@@ -334,28 +334,28 @@ section:not(.hero) h2 {
 
 .project h3 {
     margin-top: 12px;
-
     margin-bottom: 10px;
-
     font-size: 21px;
 }
 
 .project p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* PROJECT LINK */
+
 .project-link {
     margin-top: 22px;
-
     color: var(--accent);
-
     font-size: 13px;
-
     font-weight: 600;
-
     transition: 0.3s;
 }
 
 .project:hover .project-link {
     transform: translateX(5px);
-}
 }
 
 
