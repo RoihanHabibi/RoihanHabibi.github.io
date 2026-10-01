@@ -321,17 +321,14 @@
              RHV
         ========================== -->
 
-        <div class="infra-node infra-rhv">
+        <div class="infra-node infra-rhv rhv-clickable" onclick="toggleRHV()">
 
             <div class="infra-node-number">
                 01
             </div>
 
             <div>
-
-                <h3>
-                    RHV / Virtual Infrastructure
-                </h3>
+                <h3>RHV / Virtual Infrastructure</h3>
 
                 <p>
                     Virtual machines and infrastructure workloads
@@ -339,21 +336,56 @@
                 </p>
 
                 <div class="infra-tags">
-
-                    <span>
-                        RHV
-                    </span>
-
-                    <span>
-                        VM
-                    </span>
-
-                    <span>
-                        HOST
-                    </span>
-
+                    <span>RHV</span>
+                    <span>VM</span>
+                    <span>HOST</span>
                 </div>
 
+                <div class="rhv-click-hint">
+                    CLICK TO EXPAND
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- RHV EXPANSION -->
+
+        <div class="rhv-details" id="rhvDetails">
+
+            <div class="rhv-detail-card">
+                <span>01</span>
+
+                <h4>Virtual Machine</h4>
+
+                <p>
+                    Virtual workloads running inside the
+                    Red Hat Virtualization environment.
+                </p>
+            </div>
+
+
+            <div class="rhv-detail-card">
+                <span>02</span>
+
+                <h4>RHV Host</h4>
+
+                <p>
+                    Physical virtualization host responsible
+                    for running virtual machines.
+                </p>
+            </div>
+
+
+            <div class="rhv-detail-card">
+                <span>03</span>
+
+                <h4>RHV Manager</h4>
+
+                <p>
+                    Central management component used to
+                    manage the virtualization environment.
+                </p>
             </div>
 
         </div>
@@ -1193,6 +1225,23 @@
 
     </footer>
 
+<script>
+
+function toggleRHV() {
+
+    const details =
+        document.getElementById("rhvDetails");
+
+    const rhv =
+        document.querySelector(".infra-rhv");
+
+    details.classList.toggle("active");
+
+    rhv.classList.toggle("rhv-active");
+
+}
+
+</script>
 
 </body>
 
