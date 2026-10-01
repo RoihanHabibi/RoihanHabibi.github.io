@@ -1264,14 +1264,9 @@ footer {
 
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(255, 255, 255, 0.035),
-            transparent 65%
-        );
+    background: #080b12;
 
-    border: 1px solid var(--border);
+    border: 1px solid #1e293b;
     border-radius: 20px;
 }
 
@@ -1287,10 +1282,10 @@ footer {
 ========================================= */
 
 .network-path {
-    fill: none;
+    fill: none !important;
 
-    stroke: rgba(255, 255, 255, 0.16);
-    stroke-width: 2;
+    stroke: #334155 !important;
+    stroke-width: 2 !important;
 
     stroke-linecap: round;
 
@@ -1305,11 +1300,11 @@ footer {
 .packet {
     r: 6;
 
-    fill: var(--accent);
+    fill: #22d3ee !important;
 
     filter:
-        drop-shadow(0 0 5px var(--accent))
-        drop-shadow(0 0 12px var(--accent));
+        drop-shadow(0 0 5px #22d3ee)
+        drop-shadow(0 0 12px #22d3ee);
 }
 
 .packet-small {
@@ -1323,33 +1318,34 @@ footer {
 
 .topology-node rect {
 
-    fill: var(--bg-card);
+    fill: #111827 !important;
 
-    stroke: var(--border);
+    stroke: #334155 !important;
 
-    stroke-width: 1.5;
-
-    transition:
-        0.3s ease;
+    stroke-width: 1.5 !important;
 }
 
 .topology-node:hover rect {
 
-    stroke: var(--accent);
+    fill: #172033 !important;
+
+    stroke: #22d3ee !important;
 
     filter:
-        drop-shadow(0 0 12px rgba(0, 180, 255, 0.25));
+        drop-shadow(0 0 12px rgba(34, 211, 238, 0.25));
 }
 
 
 .topology-node-main rect {
 
-    stroke: var(--accent);
+    fill: #0f1c2e !important;
 
-    stroke-width: 2;
+    stroke: #22d3ee !important;
+
+    stroke-width: 2 !important;
 
     filter:
-        drop-shadow(0 0 15px rgba(0, 180, 255, 0.12));
+        drop-shadow(0 0 15px rgba(34, 211, 238, 0.15));
 }
 
 
@@ -1359,7 +1355,7 @@ footer {
 
 .node-title {
 
-    fill: #f5f7fa;
+    fill: #f8fafc !important;
 
     font-family:
         Arial,
@@ -1375,7 +1371,7 @@ footer {
 
 .node-subtitle {
 
-    fill: var(--muted);
+    fill: #94a3b8 !important;
 
     font-family:
         "JetBrains Mono",
@@ -1393,19 +1389,19 @@ footer {
 
 .endpoint-node circle {
 
-    fill: var(--bg-card);
+    fill: #111827 !important;
 
-    stroke: var(--accent);
+    stroke: #22d3ee !important;
 
-    stroke-width: 2;
+    stroke-width: 2 !important;
 
     filter:
-        drop-shadow(0 0 8px rgba(0, 180, 255, 0.2));
+        drop-shadow(0 0 8px rgba(34, 211, 238, 0.25));
 }
 
 .endpoint-label {
 
-    fill: var(--muted);
+    fill: #94a3b8 !important;
 
     font-family:
         "JetBrains Mono",
