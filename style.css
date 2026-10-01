@@ -2527,3 +2527,217 @@ footer {
 .infra-node {
     z-index: 3;
 }
+
+/* =========================================
+   RHV INTERACTIVE PANEL — FINAL
+========================================= */
+
+.infra-rhv.rhv-clickable {
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* RHV saat aktif */
+.infra-rhv.rhv-open {
+    border-color: #22d3ee;
+    box-shadow:
+        0 0 0 1px rgba(34, 211, 238, 0.15),
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(34, 211, 238, 0.08);
+}
+
+/* Hint */
+.rhv-click-hint {
+    margin-top: 12px;
+    color: #22d3ee;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* =========================================
+   RHV POPUP
+========================================= */
+
+.rhv-expand-panel {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 520px;
+    max-width: calc(100vw - 40px);
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111827,
+            #080d18
+        );
+
+    border: 1px solid #22d3ee;
+    border-radius: 16px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(34, 211, 238, 0.08);
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.96);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+/* Saat RHV dibuka */
+.infra-rhv.rhv-open .rhv-expand-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+/* =========================================
+   PANEL TITLE
+========================================= */
+
+.rhv-expand-title {
+    margin-bottom: 20px;
+
+    color: #22d3ee;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #1e293b;
+}
+
+/* =========================================
+   COMPONENT ITEMS
+========================================= */
+
+.rhv-expand-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px;
+
+    margin-bottom: 10px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.rhv-expand-item:last-child {
+    margin-bottom: 0;
+}
+
+.rhv-expand-item:hover {
+    border-color: #22d3ee;
+
+    background: #0f172a;
+
+    transform: translateX(4px);
+}
+
+/* Number */
+.rhv-expand-item span {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+    border-radius: 8px;
+
+    color: #22d3ee;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Text */
+.rhv-expand-item strong {
+    color: #f8fafc;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   BACKDROP
+========================================= */
+
+.rhv-expand-panel::before {
+    content: "";
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100vw;
+    height: 100vh;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(2, 6, 23, 0.55);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .rhv-expand-panel {
+        width: calc(100vw - 30px);
+        padding: 20px;
+    }
+
+    .rhv-expand-item {
+        padding: 13px;
+    }
+
+}
