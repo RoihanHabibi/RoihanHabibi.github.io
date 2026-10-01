@@ -2235,42 +2235,26 @@ footer {
     line-height: 1.6;
 }
 
-
 /* =========================================
    NODE POSITIONS
 ========================================= */
 
 .infra-rhv {
-
-    width: 430px;
-
-    top: 40px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(34, 211, 238, 0.04);
 }
 
 
 .infra-zabbix {
-
-    width: 450px;
-
-    top: 250px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%);
-
-    border-color: #22d3ee;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(34, 211, 238, 0.08);
 }
 
 
 .infra-alert {
-
-    width: 350px;
+    width: 300px;
 
     top: 250px;
 
@@ -2279,8 +2263,7 @@ footer {
 
 
 .infra-database {
-
-    width: 350px;
+    width: 300px;
 
     top: 250px;
 
@@ -2289,21 +2272,18 @@ footer {
 
 
 .infra-grafana {
-
-    width: 450px;
+    width: 400px;
 
     top: 465px;
 
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 }
 
 
 .infra-telegram {
-
-    width: 350px;
+    width: 300px;
 
     top: 465px;
 
@@ -2312,17 +2292,14 @@ footer {
 
 
 .infra-web {
-
-    width: 450px;
+    width: 400px;
 
     top: 690px;
 
     left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 }
-
 
 /* =========================================
    ICONS
