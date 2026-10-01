@@ -165,70 +165,164 @@
 
 
 
-    <!-- =========================
-         03 — ARCHITECTURE
-    ========================== -->
+<!-- =========================
+     03 — ARCHITECTURE
+========================== -->
 
-    <section class="project-section">
+<section class="project-section">
 
-        <p class="section-label">
-            03 — ARCHITECTURE
-        </p>
+    <p class="section-label">
+        03 — ARCHITECTURE
+    </p>
 
-        <h2>
-            Infrastructure Architecture
-        </h2>
+    <h2>
+        Infrastructure Architecture
+    </h2>
 
+    <div class="architecture-flow">
 
-        <div class="architecture">
+        <!-- RHV -->
 
-            <div class="architecture-item">
-                RHV / Virtual Infrastructure
+        <div class="architecture-card">
+
+            <div class="architecture-number">
+                01
             </div>
 
-            <div class="arrow">
-                ↓
-            </div>
+            <div class="architecture-content">
 
-            <div class="architecture-item">
-                Zabbix Monitoring
-            </div>
+                <h3>
+                    RHV / Virtual Infrastructure
+                </h3>
 
-            <div class="arrow">
-                ↓
-            </div>
+                <p>
+                    Virtual infrastructure hosting the monitored
+                    workloads and services.
+                </p>
 
-            <div class="architecture-item">
-                Grafana Visualization
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="architecture-item">
-                Python Monitoring &amp; Alerting
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="architecture-item">
-                Telegram Notification
-            </div>
-
-            <div class="arrow">
-                ↓
-            </div>
-
-            <div class="architecture-item">
-                Ansible Automation
             </div>
 
         </div>
 
-    </section>
+
+        <div class="architecture-arrow">
+            ↓
+        </div>
+
+
+        <!-- ZABBIX -->
+
+        <div class="architecture-card">
+
+            <div class="architecture-number">
+                02
+            </div>
+
+            <div class="architecture-content">
+
+                <h3>
+                    Zabbix Monitoring
+                </h3>
+
+                <p>
+                    Collects infrastructure metrics including
+                    availability, CPU, memory, storage and network data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="architecture-arrow">
+            ↓
+        </div>
+
+
+        <!-- GRAFANA -->
+
+        <div class="architecture-card">
+
+            <div class="architecture-number">
+                03
+            </div>
+
+            <div class="architecture-content">
+
+                <h3>
+                    Grafana Visualization
+                </h3>
+
+                <p>
+                    Provides centralized dashboards for infrastructure
+                    performance and resource utilization.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="architecture-arrow">
+            ↓
+        </div>
+
+
+        <!-- PYTHON -->
+
+        <div class="architecture-card">
+
+            <div class="architecture-number">
+                04
+            </div>
+
+            <div class="architecture-content">
+
+                <h3>
+                    Python Monitoring & Alerting
+                </h3>
+
+                <p>
+                    Processes monitoring events and handles
+                    notification logic based on defined conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="architecture-arrow">
+            ↓
+        </div>
+
+
+        <!-- TELEGRAM -->
+
+        <div class="architecture-card">
+
+            <div class="architecture-number">
+                05
+            </div>
+
+            <div class="architecture-content">
+
+                <h3>
+                    Telegram Notification
+                </h3>
+
+                <p>
+                    Delivers infrastructure alerts and operational
+                    notifications through Telegram.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
