@@ -1134,23 +1134,76 @@ footer {
 }
 
 /* =========================================
-   PROJECT PAGE SPACING
+   PROJECT PAGE LAYOUT FIX
 ========================================= */
 
+/* Header project mengikuti lebar container */
 .project-header {
-    padding-top: 160px;
-    padding-bottom: 70px;
+    padding-top: 120px;
+    padding-bottom: 55px;
 }
 
+/* Samakan posisi container header dengan content */
+.project-header .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Content utama */
 .project-content {
-    padding-top: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
+/* Jarak antar section */
 .project-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 55px;
+    padding-bottom: 55px;
 }
 
+/* Section pertama lebih dekat ke header */
 .project-section:first-child {
-    padding-top: 30px;
+    padding-top: 20px;
+}
+
+/* =========================================
+   PROJECT HEADER TYPOGRAPHY
+========================================= */
+
+.project-header h1 {
+    margin-bottom: 20px;
+}
+
+.project-intro {
+    max-width: 780px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .project-header {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .project-header .container,
+    .project-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
 }
