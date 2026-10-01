@@ -190,7 +190,7 @@
 
 
         <!-- =========================
-             SVG CONNECTION LAYER
+            SVG CONNECTION LAYER
         ========================== -->
 
         <svg
@@ -199,119 +199,151 @@
             preserveAspectRatio="none"
         >
 
-            <!-- RHV → ZABBIX -->
+            <!-- =========================
+                RHV → ZABBIX
+            ========================== -->
 
             <path
                 class="infra-line"
-                d="M500 125 L500 245"
-            />
-
-            <path
-                class="infra-line"
-                d="M500 350 L500 470"
-            />
-
-            <!-- ZABBIX → DATABASE -->
-
-            <path
-                class="infra-line"
-                d="M550 300 L790 300"
-            />
-
-            <!-- ZABBIX → ALERTING -->
-
-            <path
-                class="infra-line"
-                d="M450 300 L210 300"
-            />
-
-            <!-- ALERTING → TELEGRAM -->
-
-            <path
-                class="infra-line"
-                d="M210 365 L210 485"
-            />
-
-            <!-- GRAFANA → WEB -->
-
-            <path
-                class="infra-line"
-                d="M500 575 L500 700"
+                d="M500 195 L500 250"
             />
 
 
             <!-- =========================
-                 MOVING PACKETS
+                ZABBIX → ALERTING
             ========================== -->
+
+            <path
+                class="infra-line"
+                d="M285 315 L300 315"
+            />
+
+
+            <!-- =========================
+                ZABBIX → DATABASE
+            ========================== -->
+
+            <path
+                class="infra-line"
+                d="M715 315 L840 315"
+            />
+
+
+            <!-- =========================
+                ZABBIX → GRAFANA
+            ========================== -->
+
+            <path
+                class="infra-line"
+                d="M500 385 L500 465"
+            />
+
+
+            <!-- =========================
+                ALERTING → TELEGRAM
+            ========================== -->
+
+            <path
+                class="infra-line"
+                d="M160 385 L160 465"
+            />
+
+
+            <!-- =========================
+                GRAFANA → WEB
+            ========================== -->
+
+            <path
+                class="infra-line"
+                d="M500 600 L500 690"
+            />
+
+
+            <!-- =========================
+                MOVING PACKETS
+            ========================== -->
+
 
             <!-- RHV → ZABBIX -->
 
             <circle class="infra-packet">
+
                 <animateMotion
                     dur="2s"
                     repeatCount="indefinite"
-                    path="M500 125 L500 245"
+                    path="M500 195 L500 250"
                 />
+
+            </circle>
+
+
+            <!-- ZABBIX → ALERTING -->
+
+            <circle class="infra-packet">
+
+                <animateMotion
+                    dur="2.2s"
+                    begin="0.4s"
+                    repeatCount="indefinite"
+                    path="M285 315 L300 315"
+                />
+
+            </circle>
+
+
+            <!-- ZABBIX → DATABASE -->
+
+            <circle class="infra-packet">
+
+                <animateMotion
+                    dur="2.2s"
+                    begin="0.8s"
+                    repeatCount="indefinite"
+                    path="M715 315 L840 315"
+                />
+
             </circle>
 
 
             <!-- ZABBIX → GRAFANA -->
 
             <circle class="infra-packet">
+
                 <animateMotion
                     dur="2s"
                     begin="0.5s"
                     repeatCount="indefinite"
-                    path="M500 350 L500 470"
+                    path="M500 385 L500 465"
                 />
-            </circle>
 
-
-            <!-- ZABBIX → DATABASE -->
-
-            <circle class="infra-packet">
-                <animateMotion
-                    dur="2.2s"
-                    begin="0.3s"
-                    repeatCount="indefinite"
-                    path="M550 300 L790 300"
-                />
-            </circle>
-
-
-            <!-- ZABBIX → ALERTING -->
-
-            <circle class="infra-packet">
-                <animateMotion
-                    dur="2.2s"
-                    begin="1s"
-                    repeatCount="indefinite"
-                    path="M450 300 L210 300"
-                />
             </circle>
 
 
             <!-- ALERTING → TELEGRAM -->
 
             <circle class="infra-packet">
+
                 <animateMotion
                     dur="2s"
-                    begin="1.5s"
+                    begin="1s"
                     repeatCount="indefinite"
-                    path="M210 365 L210 485"
+                    path="M160 385 L160 465"
                 />
+
             </circle>
 
 
             <!-- GRAFANA → WEB -->
 
             <circle class="infra-packet">
+
                 <animateMotion
                     dur="2s"
-                    begin="0.8s"
+                begin="0.8s"
                     repeatCount="indefinite"
-                    path="M500 575 L500 700"
+                    path="M500 600 L500 690"
                 />
+
             </circle>
 
         </svg>
