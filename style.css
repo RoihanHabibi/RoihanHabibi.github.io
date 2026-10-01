@@ -2231,6 +2231,10 @@ footer {
    NODE POSITIONS
 ========================================= */
 
+/* =========================
+   RHV
+========================= */
+
 .infra-rhv {
     width: 430px;
 
@@ -2241,6 +2245,10 @@ footer {
         translateX(-50%);
 }
 
+
+/* =========================
+   ZABBIX
+========================= */
 
 .infra-zabbix {
     width: 450px;
@@ -2255,21 +2263,45 @@ footer {
 }
 
 
+/* =========================
+   ALERTING
+========================= */
+
 .infra-alert {
-    width: 350px;
+    width: 300px;
 
     top: 250px;
-    left: 35px;
+    left: 20px;
 }
 
+
+/* =========================
+   DATABASE
+========================= */
 
 .infra-database {
-    width: 350px;
+    width: 300px;
 
     top: 250px;
-    right: 35px;
+    right: 20px;
 }
 
+
+/* =========================
+   TELEGRAM
+========================= */
+
+.infra-telegram {
+    width: 300px;
+
+    top: 465px;
+    left: 20px;
+}
+
+
+/* =========================
+   GRAFANA
+========================= */
 
 .infra-grafana {
     width: 450px;
@@ -2282,13 +2314,9 @@ footer {
 }
 
 
-.infra-telegram {
-    width: 350px;
-
-    top: 465px;
-    left: 35px;
-}
-
+/* =========================
+   WEB
+========================= */
 
 .infra-web {
     width: 450px;
@@ -2299,7 +2327,6 @@ footer {
     transform:
         translateX(-50%);
 }
-
 
 /* =========================================
    ICON
