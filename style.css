@@ -2061,7 +2061,7 @@ footer {
 
     height: 900px;
 
-    margin: 55px auto 0;
+    margin: 50px auto 0;
 
     background:
         radial-gradient(
@@ -2715,4 +2715,111 @@ footer {
         padding: 4px 6px;
     }
 
+}
+
+/* =========================================
+   NODE POSITIONS — FIXED
+========================================= */
+
+.infra-rhv {
+    position: absolute !important;
+
+    width: 430px !important;
+    height: 170px;
+
+    top: 40px !important;
+    left: 50% !important;
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+.infra-zabbix {
+    position: absolute !important;
+
+    width: 430px !important;
+    height: 170px;
+
+    top: 255px !important;
+    left: 50% !important;
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
+
+    border-color: #22d3ee !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(34, 211, 238, 0.08);
+}
+
+
+.infra-alert {
+    position: absolute !important;
+
+    width: 300px !important;
+    height: 170px;
+
+    top: 255px !important;
+    left: 35px !important;
+    right: auto !important;
+
+    transform: none !important;
+}
+
+
+.infra-database {
+    position: absolute !important;
+
+    width: 300px !important;
+    height: 170px;
+
+    top: 255px !important;
+    right: 35px !important;
+    left: auto !important;
+
+    transform: none !important;
+}
+
+
+.infra-grafana {
+    position: absolute !important;
+
+    width: 430px !important;
+    height: 170px;
+
+    top: 475px !important;
+    left: 50% !important;
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+.infra-telegram {
+    position: absolute !important;
+
+    width: 300px !important;
+    height: 170px;
+
+    top: 475px !important;
+    left: 35px !important;
+    right: auto !important;
+
+    transform: none !important;
+}
+
+
+.infra-web {
+    position: absolute !important;
+
+    width: 430px !important;
+    height: 170px;
+
+    top: 700px !important;
+    left: 50% !important;
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
 }
