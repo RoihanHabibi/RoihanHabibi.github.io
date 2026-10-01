@@ -1434,3 +1434,638 @@ footer {
     }
 
 }
+
+/* =========================================
+   MULTI-VENDOR AUTOMATION
+========================================= */
+
+.section-description {
+    max-width: 850px;
+}
+
+
+/* Vendor flow */
+
+.vendor-flow {
+    margin-top: 50px;
+}
+
+
+/* Detection */
+
+.vendor-detection {
+
+    width: 240px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #0f172a;
+
+    border: 1px solid #22d3ee;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.08);
+}
+
+.vendor-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #111827;
+
+    border: 1px solid #22d3ee;
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.vendor-detection h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 18px;
+
+    color: #f8fafc;
+}
+
+.vendor-detection p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* Connector */
+
+.vendor-connector {
+
+    width: 2px;
+
+    height: 45px;
+
+    margin: 0 auto;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #334155 0,
+            #334155 6px,
+            transparent 6px,
+            transparent 12px
+        );
+}
+
+
+/* Vendor cards */
+
+.vendor-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    position: relative;
+}
+
+
+/* Horizontal connector */
+
+.vendor-grid::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 16.66%;
+
+    right: 16.66%;
+
+    height: 1px;
+
+    background: #334155;
+}
+
+
+/* Cards */
+
+.vendor-card {
+
+    position: relative;
+
+    padding: 28px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.vendor-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #22d3ee;
+
+    box-shadow:
+        0 0 10px #22d3ee;
+}
+
+.vendor-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #22d3ee;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Card header */
+
+.vendor-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.vendor-number {
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.vendor-status {
+
+    padding: 5px 8px;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 6px;
+
+    color: #64748b;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Vendor name */
+
+.vendor-logo-text {
+
+    margin-bottom: 12px;
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.vendor-card h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 19px;
+
+    color: #f8fafc;
+}
+
+.vendor-card p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Vendor tags */
+
+.vendor-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+.vendor-tags span {
+
+    padding: 6px 9px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 6px;
+
+    color: #64748b;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 10px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .vendor-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .vendor-grid::before {
+
+        display: none;
+    }
+
+    .vendor-card::before {
+
+        display: none;
+    }
+
+}
+
+/* =========================================
+   API & WEB INTERFACE
+========================================= */
+
+.api-architecture {
+
+    max-width: 750px;
+
+    margin: 50px auto;
+}
+
+
+/* API layer */
+
+.api-layer {
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 25px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 14px;
+
+    transition:
+        0.3s ease;
+}
+
+.api-layer:hover {
+
+    border-color: #22d3ee;
+
+    transform:
+        translateX(5px);
+}
+
+.api-layer-active {
+
+    border-color: #22d3ee;
+
+    background: #0f1c2e;
+
+    box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.08);
+}
+
+
+/* Number */
+
+.api-layer-number {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* Text */
+
+.api-layer h3 {
+
+    margin: 0 0 6px;
+
+    color: #f8fafc;
+
+    font-size: 17px;
+}
+
+.api-layer p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* Arrow */
+
+.api-arrow {
+
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   API ENDPOINTS
+========================================= */
+
+.api-endpoints {
+
+    margin-top: 60px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.api-endpoints-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 22px;
+
+    background: #0f172a;
+
+    border-bottom: 1px solid #1e293b;
+}
+
+.api-endpoints-header span {
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.api-endpoints-header small {
+
+    color: #64748b;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 10px;
+}
+
+
+/* Endpoint */
+
+.api-endpoint {
+
+    display: grid;
+
+    grid-template-columns: 70px 230px 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #1e293b;
+
+    transition:
+        background 0.3s ease;
+}
+
+.api-endpoint:last-child {
+
+    border-bottom: none;
+}
+
+.api-endpoint:hover {
+
+    background: #0f172a;
+}
+
+
+/* Method */
+
+.api-method {
+
+    padding: 6px 8px;
+
+    text-align: center;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 6px;
+
+    color: #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* Endpoint path */
+
+.api-endpoint code {
+
+    color: #f8fafc;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+}
+
+
+/* Endpoint description */
+
+.api-endpoint-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.api-endpoint-info strong {
+
+    color: #e2e8f0;
+
+    font-size: 13px;
+}
+
+.api-endpoint-info span {
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .api-endpoint {
+
+        grid-template-columns: 60px 1fr;
+
+    }
+
+    .api-endpoint-info {
+
+        grid-column: 1 / -1;
+
+        padding-left: 78px;
+    }
+
+}

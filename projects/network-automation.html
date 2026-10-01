@@ -724,195 +724,448 @@
              06 — MULTI VENDOR
         ========================== -->
 
-        <section class="project-section">
+<!-- =========================
+     06 — MULTI VENDOR
+========================== -->
 
-            <p class="section-label">
-                06 — MULTI-VENDOR AUTOMATION
-            </p>
+<section class="project-section">
 
-            <h2>
-                Multi-Vendor OLT Handling
-            </h2>
+    <p class="section-label">
+        06 — MULTI-VENDOR AUTOMATION
+    </p>
+
+    <h2>
+        Multi-Vendor OLT Handling
+    </h2>
+
+    <p class="section-description">
+        After the OLT device is detected, the automation workflow
+        selects the appropriate vendor-specific command structure
+        before executing the configuration process.
+    </p>
+
+
+    <!-- VENDOR FLOW -->
+
+    <div class="vendor-flow">
+
+        <div class="vendor-detection">
+
+            <span class="vendor-icon">
+                DETECT
+            </span>
+
+            <h3>
+                Vendor Detection
+            </h3>
 
             <p>
-                Different OLT vendors can use different command
-                structures and configuration workflows. The
-                automation layer therefore needs to identify the
-                appropriate vendor before executing commands.
+                Identify OLT vendor
             </p>
 
-            <div class="vendor-grid">
+        </div>
 
-                <div class="vendor-card">
 
-                    <span>
+        <div class="vendor-connector">
+            <span></span>
+        </div>
+
+
+        <div class="vendor-grid">
+
+
+            <!-- ZTE -->
+
+            <div class="vendor-card">
+
+                <div class="vendor-card-header">
+
+                    <span class="vendor-number">
                         01
                     </span>
 
-                    <h3>
-                        ZTE
-                    </h3>
-
-                    <p>
-                        Vendor-specific automation workflow for
-                        ZTE OLT environments.
-                    </p>
+                    <span class="vendor-status">
+                        SUPPORTED
+                    </span>
 
                 </div>
 
-
-                <div class="vendor-card">
-
-                    <span>
-                        02
-                    </span>
-
-                    <h3>
-                        Huawei
-                    </h3>
-
-                    <p>
-                        Vendor-specific automation workflow for
-                        Huawei OLT environments.
-                    </p>
-
+                <div class="vendor-logo-text">
+                    ZTE
                 </div>
 
+                <h3>
+                    ZTE OLT
+                </h3>
 
-                <div class="vendor-card">
+                <p>
+                    Vendor-specific command workflow for
+                    ZTE OLT infrastructure.
+                </p>
+
+                <div class="vendor-tags">
 
                     <span>
-                        03
+                        GPON
                     </span>
 
-                    <h3>
-                        FiberHome
-                    </h3>
+                    <span>
+                        ONU
+                    </span>
 
-                    <p>
-                        Vendor-specific automation workflow for
-                        FiberHome OLT environments.
-                    </p>
+                    <span>
+                        CLI
+                    </span>
 
                 </div>
 
             </div>
 
-        </section>
+
+            <!-- FIBERHOME -->
+
+            <div class="vendor-card">
+
+                <div class="vendor-card-header">
+
+                    <span class="vendor-number">
+                        02
+                    </span>
+
+                    <span class="vendor-status">
+                        SUPPORTED
+                    </span>
+
+                </div>
+
+                <div class="vendor-logo-text">
+                    FIBERHOME
+                </div>
+
+                <h3>
+                    FiberHome OLT
+                </h3>
+
+                <p>
+                    Vendor-specific command workflow for
+                    FiberHome OLT infrastructure.
+                </p>
+
+                <div class="vendor-tags">
+
+                    <span>
+                        GPON
+                    </span>
+
+                    <span>
+                        ONU
+                    </span>
+
+                    <span>
+                        CLI
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HUAWEI -->
+
+            <div class="vendor-card">
+
+                <div class="vendor-card-header">
+
+                    <span class="vendor-number">
+                        03
+                    </span>
+
+                    <span class="vendor-status">
+                        SUPPORTED
+                    </span>
+
+                </div>
+
+                <div class="vendor-logo-text">
+                    HUAWEI
+                </div>
+
+                <h3>
+                    Huawei OLT
+                </h3>
+
+                <p>
+                    Vendor-specific command workflow for
+                    Huawei OLT infrastructure.
+                </p>
+
+                <div class="vendor-tags">
+
+                    <span>
+                        GPON
+                    </span>
+
+                    <span>
+                        ONU
+                    </span>
+
+                    <span>
+                        CLI
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- =========================
              07 — API
         ========================== -->
 
-        <section class="project-section">
+<!-- =========================
+     07 — API & WEB INTERFACE
+========================== -->
 
-            <p class="section-label">
-                07 — API & WEB INTERFACE
-            </p>
+<section class="project-section">
 
-            <h2>
-                API & Web Interface
-            </h2>
+    <p class="section-label">
+        07 — API & WEB INTERFACE
+    </p>
 
-            <p>
-                The web interface communicates with the backend
-                automation service through API endpoints.
-            </p>
+    <h2>
+        API & Web Interface
+    </h2>
 
-
-            <div class="api-list">
-
-                <div class="api-item">
-
-                    <code>
-                        /api/pppoe
-                    </code>
-
-                    <div>
-
-                        <h3>
-                            PPPoE
-                        </h3>
-
-                        <p>
-                            Handles PPPoE-related provisioning
-                            requests.
-                        </p>
-
-                    </div>
-
-                </div>
+    <p class="section-description">
+        The web interface provides a centralized entry point for
+        network provisioning operations. Requests are processed
+        through backend API endpoints before reaching the
+        network automation layer.
+    </p>
 
 
-                <div class="api-item">
+    <!-- SYSTEM FLOW -->
 
-                    <code>
-                        /api/olt-register
-                    </code>
-
-                    <div>
-
-                        <h3>
-                            OLT Registration
-                        </h3>
-
-                        <p>
-                            Processes ONU registration requests
-                            through the automation service.
-                        </p>
-
-                    </div>
-
-                </div>
+    <div class="api-architecture">
 
 
-                <div class="api-item">
+        <!-- WEB -->
 
-                    <code>
-                        /api/check-onu-id
-                    </code>
+        <div class="api-layer">
 
-                    <div>
+            <span class="api-layer-number">
+                01
+            </span>
 
-                        <h3>
-                            ONU ID Check
-                        </h3>
+            <div>
 
-                        <p>
-                            Checks ONU identification information
-                            before registration.
-                        </p>
+                <h3>
+                    Web Interface
+                </h3>
 
-                    </div>
-
-                </div>
-
-
-                <div class="api-item">
-
-                    <code>
-                        /api/check-onu
-                    </code>
-
-                    <div>
-
-                        <h3>
-                            ONU Check
-                        </h3>
-
-                        <p>
-                            Provides an API workflow for checking
-                            ONU-related information.
-                        </p>
-
-                    </div>
-
-                </div>
+                <p>
+                    User interacts with the provisioning
+                    interface.
+                </p>
 
             </div>
 
-        </section>
+        </div>
+
+
+        <div class="api-arrow">
+            ↓
+        </div>
+
+
+        <!-- API -->
+
+        <div class="api-layer api-layer-active">
+
+            <span class="api-layer-number">
+                02
+            </span>
+
+            <div>
+
+                <h3>
+                    Flask REST API
+                </h3>
+
+                <p>
+                    Receives requests and forwards them
+                    to the automation workflow.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="api-arrow">
+            ↓
+        </div>
+
+
+        <!-- AUTOMATION -->
+
+        <div class="api-layer">
+
+            <span class="api-layer-number">
+                03
+            </span>
+
+            <div>
+
+                <h3>
+                    Network Automation
+                </h3>
+
+                <p>
+                    Executes device-specific operations
+                    through the automation engine.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- API ENDPOINTS -->
+
+    <div class="api-endpoints">
+
+        <div class="api-endpoints-header">
+
+            <span>
+                API ENDPOINTS
+            </span>
+
+            <small>
+                REST
+            </small>
+
+        </div>
+
+
+        <!-- Endpoint 01 -->
+
+        <div class="api-endpoint">
+
+            <div class="api-method">
+                POST
+            </div>
+
+            <code>
+                /api/pppoe
+            </code>
+
+            <div class="api-endpoint-info">
+
+                <strong>
+                    PPPoE Provisioning
+                </strong>
+
+                <span>
+                    Handles PPPoE-related provisioning requests.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Endpoint 02 -->
+
+        <div class="api-endpoint">
+
+            <div class="api-method">
+                POST
+            </div>
+
+            <code>
+                /api/olt-register
+            </code>
+
+            <div class="api-endpoint-info">
+
+                <strong>
+                    OLT Registration
+                </strong>
+
+                <span>
+                    Processes ONU registration requests.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Endpoint 03 -->
+
+        <div class="api-endpoint">
+
+            <div class="api-method">
+                GET
+            </div>
+
+            <code>
+                /api/check-onu-id
+            </code>
+
+            <div class="api-endpoint-info">
+
+                <strong>
+                    ONU ID Check
+                </strong>
+
+                <span>
+                    Checks ONU identification information.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Endpoint 04 -->
+
+        <div class="api-endpoint">
+
+            <div class="api-method">
+                GET
+            </div>
+
+            <code>
+                /api/check-onu
+            </code>
+
+            <div class="api-endpoint-info">
+
+                <strong>
+                    ONU Check
+                </strong>
+
+                <span>
+                    Checks ONU-related information.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- =========================
