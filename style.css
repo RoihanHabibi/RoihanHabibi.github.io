@@ -1207,3 +1207,47 @@ footer {
     }
 
 }
+
+/* =========================================
+   FORCE PROJECT ALIGNMENT
+========================================= */
+
+.project-header .container,
+.project-content {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.project-section {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.project-section h2,
+.project-section p,
+.project-section .section-label {
+    margin-left: 0;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .project-header .container,
+    .project-content {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
