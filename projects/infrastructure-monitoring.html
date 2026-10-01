@@ -347,33 +347,42 @@
                 </div>
 
             </div>
+            <!-- RHV DETAIL PANEL -->
+            <div class="rhv-detail-panel">
 
-
-            <!-- RHV EXPAND PANEL -->
-
-            <div class="rhv-expand-panel">
-
-                <div class="rhv-expand-title">
-                    RHV COMPONENTS
+                <div class="rhv-detail-header">
+                    <span>RHV COMPONENTS</span>
+                    <button type="button" onclick="toggleRHV()">×</button>
                 </div>
 
-                <div class="rhv-expand-item">
-                    <span>01</span>
-                    <strong>RHV Host</strong>
-                </div>
+                <div class="rhv-detail-grid">
 
-                <div class="rhv-expand-item">
-                    <span>02</span>
-                    <strong>Virtual Machines</strong>
-                </div>
+                    <div class="rhv-detail-item">
+                        <span>01</span>
+                        <div>
+                            <strong>RHV Host</strong>
+                            <p>Physical virtualization host.</p>
+                        </div>
+                    </div>
 
-                <div class="rhv-expand-item">
-                    <span>03</span>
-                    <strong>RHV Manager</strong>
-                </div>
+                    <div class="rhv-detail-item">
+                        <span>02</span>
+                        <div>
+                            <strong>Virtual Machines</strong>
+                            <p>Virtual workloads running on RHV.</p>
+                        </div>
+                    </div>
 
+                    <div class="rhv-detail-item">
+                        <span>03</span>
+                        <div>
+                            <strong>RHV Manager</strong>
+                            <p>Central management for the RHV environment.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
         </div>
 
         <!-- =========================
@@ -1214,11 +1223,12 @@
 
 function toggleRHV() {
 
-    const rhv = document.querySelector(".infra-rhv");
+    const topology =
+        document.querySelector(".infra-topology");
 
-    if (!rhv) return;
+    if (!topology) return;
 
-    rhv.classList.toggle("rhv-open");
+    topology.classList.toggle("rhv-open");
 
 }
 
