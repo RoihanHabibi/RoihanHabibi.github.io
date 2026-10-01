@@ -178,150 +178,134 @@
 
     <svg
         class="topology-svg"
-        viewBox="0 0 1200 720"
+        viewBox="0 0 1200 760"
         preserveAspectRatio="xMidYMid meet"
     >
 
-        <!-- =====================
+        <!-- =================================
              CONNECTION PATHS
-        ====================== -->
+        ================================== -->
 
-        <!-- Web → API -->
+        <!-- WEB → API -->
         <path
             class="network-path"
-            d="M 600 100 L 600 190"
+            d="M 600 100 L 600 180"
         />
 
-        <!-- API → Automation -->
+        <!-- API → ROUTER -->
         <path
             class="network-path"
-            d="M 600 270 L 600 360"
+            d="M 600 260 L 600 340"
         />
 
-        <!-- Automation → MikroTik -->
+        <!-- ROUTER → OLT -->
         <path
             class="network-path"
-            d="M 600 440 L 250 540"
+            d="M 600 420 L 600 500"
         />
 
-        <!-- Automation → ZTE -->
+        <!-- OLT → VENDOR DETECTION -->
         <path
             class="network-path"
-            d="M 600 440 L 600 540"
+            d="M 600 580 L 600 620"
         />
 
-        <!-- Automation → Huawei -->
+        <!-- DETECTION → ZTE -->
         <path
             class="network-path"
-            d="M 600 440 L 950 540"
+            d="M 600 660 L 250 710"
         />
 
-        <!-- MikroTik → PPPoE -->
+        <!-- DETECTION → FIBERHOME -->
         <path
             class="network-path"
-            d="M 250 600 L 250 650"
+            d="M 600 660 L 600 710"
         />
 
-        <!-- ZTE → ONU -->
+        <!-- DETECTION → HUAWEI -->
         <path
             class="network-path"
-            d="M 600 600 L 600 650"
-        />
-
-        <!-- Huawei → ONU -->
-        <path
-            class="network-path"
-            d="M 950 600 L 950 650"
+            d="M 600 660 L 950 710"
         />
 
 
-        <!-- =====================
+        <!-- =================================
              MOVING PACKETS
-        ====================== -->
+        ================================== -->
 
-        <!-- Web → API -->
+        <!-- WEB → API -->
+        <circle class="packet">
+            <animateMotion
+                dur="1.8s"
+                repeatCount="indefinite"
+                path="M 600 100 L 600 180"
+            />
+        </circle>
+
+        <!-- API → ROUTER -->
+        <circle class="packet">
+            <animateMotion
+                dur="1.8s"
+                begin="0.4s"
+                repeatCount="indefinite"
+                path="M 600 260 L 600 340"
+            />
+        </circle>
+
+        <!-- ROUTER → OLT -->
         <circle class="packet">
             <animateMotion
                 dur="2s"
-                repeatCount="indefinite"
-                path="M 600 100 L 600 190"
-            />
-        </circle>
-
-        <!-- API → Automation -->
-        <circle class="packet">
-            <animateMotion
-                dur="2.2s"
-                begin="0.4s"
-                repeatCount="indefinite"
-                path="M 600 270 L 600 360"
-            />
-        </circle>
-
-        <!-- Automation → MikroTik -->
-        <circle class="packet">
-            <animateMotion
-                dur="2.5s"
                 begin="0.8s"
                 repeatCount="indefinite"
-                path="M 600 440 L 250 540"
+                path="M 600 420 L 600 500"
             />
         </circle>
 
-        <!-- Automation → ZTE -->
+        <!-- OLT → DETECTION -->
         <circle class="packet">
             <animateMotion
-                dur="2.5s"
-                begin="1s"
-                repeatCount="indefinite"
-                path="M 600 440 L 600 540"
-            />
-        </circle>
-
-        <!-- Automation → Huawei -->
-        <circle class="packet">
-            <animateMotion
-                dur="2.5s"
+                dur="1.2s"
                 begin="1.2s"
                 repeatCount="indefinite"
-                path="M 600 440 L 950 540"
+                path="M 600 580 L 600 620"
             />
         </circle>
 
-        <!-- MikroTik → PPPoE -->
-        <circle class="packet packet-small">
+        <!-- DETECTION → ZTE -->
+        <circle class="packet packet-vendor">
             <animateMotion
-                dur="1.5s"
-                begin="1.5s"
+                dur="2s"
+                begin="1.6s"
                 repeatCount="indefinite"
-                path="M 250 600 L 250 650"
+                path="M 600 660 L 250 710"
             />
         </circle>
 
-        <!-- ZTE → ONU -->
-        <circle class="packet packet-small">
+        <!-- DETECTION → FIBERHOME -->
+        <circle class="packet packet-vendor">
             <animateMotion
-                dur="1.5s"
-                begin="1.7s"
+                dur="2s"
+                begin="1.8s"
                 repeatCount="indefinite"
-                path="M 600 600 L 600 650"
+                path="M 600 660 L 600 710"
             />
         </circle>
 
-        <!-- Huawei → ONU -->
-        <circle class="packet packet-small">
+        <!-- DETECTION → HUAWEI -->
+        <circle class="packet packet-vendor">
             <animateMotion
-                dur="1.5s"
-                begin="1.9s"
+                dur="2s"
+                begin="2s"
                 repeatCount="indefinite"
-                path="M 950 600 L 950 650"
+                path="M 600 660 L 950 710"
             />
         </circle>
 
 
-        <!-- =====================
-             NODE: WEB
-        ====================== -->
+        <!-- =================================
+             WEB INTERFACE
+        ================================== -->
 
         <g class="topology-node">
 
@@ -329,13 +313,13 @@
                 x="500"
                 y="40"
                 width="200"
-                height="70"
+                height="60"
                 rx="14"
             />
 
             <text
                 x="600"
-                y="70"
+                y="66"
                 text-anchor="middle"
                 class="node-title"
             >
@@ -344,7 +328,7 @@
 
             <text
                 x="600"
-                y="92"
+                y="87"
                 text-anchor="middle"
                 class="node-subtitle"
             >
@@ -354,15 +338,15 @@
         </g>
 
 
-        <!-- =====================
-             NODE: API
-        ====================== -->
+        <!-- =================================
+             FLASK API
+        ================================== -->
 
         <g class="topology-node">
 
             <rect
                 x="500"
-                y="190"
+                y="180"
                 width="200"
                 height="80"
                 rx="14"
@@ -370,7 +354,7 @@
 
             <text
                 x="600"
-                y="225"
+                y="215"
                 text-anchor="middle"
                 class="node-title"
             >
@@ -379,7 +363,7 @@
 
             <text
                 x="600"
-                y="250"
+                y="240"
                 text-anchor="middle"
                 class="node-subtitle"
             >
@@ -389,15 +373,15 @@
         </g>
 
 
-        <!-- =====================
-             NODE: AUTOMATION
-        ====================== -->
+        <!-- =================================
+             MIKROTIK ROUTER
+        ================================== -->
 
         <g class="topology-node topology-node-main">
 
             <rect
                 x="500"
-                y="360"
+                y="340"
                 width="200"
                 height="80"
                 rx="14"
@@ -405,69 +389,69 @@
 
             <text
                 x="600"
-                y="395"
+                y="375"
                 text-anchor="middle"
                 class="node-title"
             >
-                AUTOMATION ENGINE
+                MIKROTIK ROUTER
             </text>
 
             <text
                 x="600"
-                y="420"
+                y="400"
                 text-anchor="middle"
                 class="node-subtitle"
             >
-                Python / Netmiko
+                Network Gateway
             </text>
 
         </g>
 
 
-        <!-- =====================
-             NODE: MIKROTIK
-        ====================== -->
-
-        <g class="topology-node">
-
-            <rect
-                x="150"
-                y="540"
-                width="200"
-                height="60"
-                rx="14"
-            />
-
-            <text
-                x="250"
-                y="565"
-                text-anchor="middle"
-                class="node-title"
-            >
-                MIKROTIK
-            </text>
-
-            <text
-                x="250"
-                y="585"
-                text-anchor="middle"
-                class="node-subtitle"
-            >
-                PPPoE
-            </text>
-
-        </g>
-
-
-        <!-- =====================
-             NODE: ZTE
-        ====================== -->
+        <!-- =================================
+             OLT / MODEM
+        ================================== -->
 
         <g class="topology-node">
 
             <rect
                 x="500"
-                y="540"
+                y="500"
+                width="200"
+                height="80"
+                rx="14"
+            />
+
+            <text
+                x="600"
+                y="535"
+                text-anchor="middle"
+                class="node-title"
+            >
+                OLT / MODEM
+            </text>
+
+            <text
+                x="600"
+                y="560"
+                text-anchor="middle"
+                class="node-subtitle"
+            >
+                Network Device
+            </text>
+
+        </g>
+
+
+        <!-- =================================
+             VENDOR DETECTION
+        ================================== -->
+
+        <g class="topology-node topology-node-main">
+
+            <rect
+                x="500"
+                y="620"
                 width="200"
                 height="60"
                 rx="14"
@@ -475,119 +459,98 @@
 
             <text
                 x="600"
-                y="565"
+                y="646"
+                text-anchor="middle"
+                class="node-title"
+            >
+                VENDOR DETECTION
+            </text>
+
+            <text
+                x="600"
+                y="667"
+                text-anchor="middle"
+                class="node-subtitle"
+            >
+                Identify OLT
+            </text>
+
+        </g>
+
+
+        <!-- =================================
+             ZTE
+        ================================== -->
+
+        <g class="topology-node">
+
+            <rect
+                x="150"
+                y="700"
+                width="200"
+                height="50"
+                rx="14"
+            />
+
+            <text
+                x="250"
+                y="730"
                 text-anchor="middle"
                 class="node-title"
             >
                 ZTE OLT
             </text>
 
+        </g>
+
+
+        <!-- =================================
+             FIBERHOME
+        ================================== -->
+
+        <g class="topology-node">
+
+            <rect
+                x="500"
+                y="700"
+                width="200"
+                height="50"
+                rx="14"
+            />
+
             <text
                 x="600"
-                y="585"
+                y="730"
                 text-anchor="middle"
-                class="node-subtitle"
+                class="node-title"
             >
-                GPON
+                FIBERHOME OLT
             </text>
 
         </g>
 
 
-        <!-- =====================
-             NODE: HUAWEI
-        ====================== -->
+        <!-- =================================
+             HUAWEI
+        ================================== -->
 
         <g class="topology-node">
 
             <rect
                 x="850"
-                y="540"
+                y="700"
                 width="200"
-                height="60"
+                height="50"
                 rx="14"
             />
 
             <text
                 x="950"
-                y="565"
+                y="730"
                 text-anchor="middle"
                 class="node-title"
             >
                 HUAWEI OLT
-            </text>
-
-            <text
-                x="950"
-                y="585"
-                text-anchor="middle"
-                class="node-subtitle"
-            >
-                GPON
-            </text>
-
-        </g>
-
-
-        <!-- =====================
-             ENDPOINTS
-        ====================== -->
-
-        <g class="endpoint-node">
-
-            <circle
-                cx="250"
-                cy="670"
-                r="20"
-            />
-
-            <text
-                x="250"
-                y="710"
-                text-anchor="middle"
-                class="endpoint-label"
-            >
-                PPPoE USER
-            </text>
-
-        </g>
-
-
-        <g class="endpoint-node">
-
-            <circle
-                cx="600"
-                cy="670"
-                r="20"
-            />
-
-            <text
-                x="600"
-                y="710"
-                text-anchor="middle"
-                class="endpoint-label"
-            >
-                ZTE ONU
-            </text>
-
-        </g>
-
-
-        <g class="endpoint-node">
-
-            <circle
-                cx="950"
-                cy="670"
-                r="20"
-            />
-
-            <text
-                x="950"
-                y="710"
-                text-anchor="middle"
-                class="endpoint-label"
-            >
-                HUAWEI ONU
             </text>
 
         </g>
