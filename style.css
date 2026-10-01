@@ -1065,3 +1065,70 @@ footer {
     }
 
 }
+
+/* =========================================
+   NETWORK TOPOLOGY PLACEHOLDER
+========================================= */
+
+.topology-placeholder {
+    width: 100%;
+    min-height: 420px;
+
+    margin-top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.04),
+            transparent 65%
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.topology-placeholder-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.topology-placeholder-content span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.topology-placeholder-content h3 {
+    margin: 0 0 12px;
+
+    font-size: 26px;
+}
+
+.topology-placeholder-content p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
