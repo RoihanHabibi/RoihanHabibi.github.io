@@ -3021,3 +3021,103 @@ footer {
     }
 
 }
+
+/* =========================================
+   FINAL TOPOLOGY SPACING
+   DO NOT MODIFY SVG
+========================================= */
+
+.infra-rhv {
+    width: 430px !important;
+
+    top: 40px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+/* =========================
+   ZABBIX
+========================= */
+
+.infra-zabbix {
+    width: 400px !important;
+    height: 170px !important;
+
+    top: 255px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    border-color: #22d3ee !important;
+}
+
+
+/* =========================
+   ALERTING
+========================= */
+
+.infra-alert {
+    width: 280px !important;
+    height: 170px !important;
+
+    top: 255px !important;
+    left: 20px !important;
+}
+
+
+/* =========================
+   DATABASE
+========================= */
+
+.infra-database {
+    width: 280px !important;
+    height: 170px !important;
+
+    top: 255px !important;
+    right: 20px !important;
+}
+
+
+/* =========================
+   TELEGRAM
+========================= */
+
+.infra-telegram {
+    width: 280px !important;
+    height: 170px !important;
+
+    top: 475px !important;
+    left: 20px !important;
+}
+
+
+/* =========================
+   GRAFANA
+========================= */
+
+.infra-grafana {
+    width: 400px !important;
+    height: 170px !important;
+
+    top: 475px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+/* =========================
+   WEB
+========================= */
+
+.infra-web {
+    width: 400px !important;
+    height: 170px !important;
+
+    top: 695px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+}
