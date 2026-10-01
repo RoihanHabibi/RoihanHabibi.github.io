@@ -1251,3 +1251,190 @@ footer {
     }
 
 }
+
+/* =========================================
+   INTERACTIVE NETWORK TOPOLOGY
+========================================= */
+
+.network-topology {
+    position: relative;
+    width: 100%;
+    margin-top: 45px;
+    padding: 20px 10px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.035),
+            transparent 65%
+        );
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.topology-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   CONNECTION LINES
+========================================= */
+
+.network-path {
+    fill: none;
+
+    stroke: rgba(255, 255, 255, 0.16);
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 6 8;
+}
+
+
+/* =========================================
+   MOVING PACKETS
+========================================= */
+
+.packet {
+    r: 6;
+
+    fill: var(--accent);
+
+    filter:
+        drop-shadow(0 0 5px var(--accent))
+        drop-shadow(0 0 12px var(--accent));
+}
+
+.packet-small {
+    r: 5;
+}
+
+
+/* =========================================
+   NETWORK NODES
+========================================= */
+
+.topology-node rect {
+
+    fill: var(--bg-card);
+
+    stroke: var(--border);
+
+    stroke-width: 1.5;
+
+    transition:
+        0.3s ease;
+}
+
+.topology-node:hover rect {
+
+    stroke: var(--accent);
+
+    filter:
+        drop-shadow(0 0 12px rgba(0, 180, 255, 0.25));
+}
+
+
+.topology-node-main rect {
+
+    stroke: var(--accent);
+
+    stroke-width: 2;
+
+    filter:
+        drop-shadow(0 0 15px rgba(0, 180, 255, 0.12));
+}
+
+
+/* =========================================
+   NODE TEXT
+========================================= */
+
+.node-title {
+
+    fill: #f5f7fa;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.node-subtitle {
+
+    fill: var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ENDPOINTS
+========================================= */
+
+.endpoint-node circle {
+
+    fill: var(--bg-card);
+
+    stroke: var(--accent);
+
+    stroke-width: 2;
+
+    filter:
+        drop-shadow(0 0 8px rgba(0, 180, 255, 0.2));
+}
+
+.endpoint-label {
+
+    fill: var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .network-topology {
+
+        margin-top: 30px;
+
+        padding: 10px;
+
+        overflow-x: auto;
+    }
+
+    .topology-svg {
+
+        min-width: 850px;
+    }
+
+}
