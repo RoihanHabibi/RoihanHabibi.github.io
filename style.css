@@ -2468,3 +2468,62 @@ footer {
     }
 
 }
+
+/* =========================================
+   PROJECT 01 — TOPOLOGY FRAME FIX
+========================================= */
+
+.infra-topology {
+    max-width: 1100px;
+    height: 900px;
+}
+
+
+/* CENTER NODE */
+
+.infra-rhv,
+.infra-zabbix,
+.infra-grafana,
+.infra-web {
+    left: 50%;
+}
+
+
+/* LEFT SIDE */
+
+.infra-alert,
+.infra-telegram {
+    width: 300px;
+    left: 25px;
+}
+
+
+/* RIGHT SIDE */
+
+.infra-database {
+    width: 300px;
+    right: 25px;
+}
+
+
+/* CENTER WIDTH */
+
+.infra-zabbix,
+.infra-grafana,
+.infra-web {
+    width: 400px;
+}
+
+
+/* MAKE CONNECTIONS VISIBLE */
+
+.infra-connections {
+    z-index: 2;
+}
+
+
+/* NODES ABOVE CONNECTIONS */
+
+.infra-node {
+    z-index: 3;
+}
