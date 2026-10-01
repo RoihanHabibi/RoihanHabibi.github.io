@@ -2529,47 +2529,52 @@ footer {
 }
 
 /* =========================================
-   RHV INTERACTIVE PANEL — FINAL
+   RHV EXPAND PANEL — FINAL FIX
 ========================================= */
 
 .infra-rhv.rhv-clickable {
     cursor: pointer;
-    z-index: 20;
+    z-index: 50;
 }
 
-/* RHV saat aktif */
 .infra-rhv.rhv-open {
+    z-index: 999;
     border-color: #22d3ee;
+
     box-shadow:
         0 0 0 1px rgba(34, 211, 238, 0.15),
-        0 15px 40px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(34, 211, 238, 0.08);
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(34, 211, 238, 0.10);
 }
 
-/* Hint */
 .rhv-click-hint {
     margin-top: 12px;
+
     color: #22d3ee;
+
     font-family: "JetBrains Mono", monospace;
     font-size: 9px;
     font-weight: 700;
+
     letter-spacing: 1.5px;
 }
 
+
 /* =========================================
-   RHV POPUP
+   PANEL
 ========================================= */
 
 .rhv-expand-panel {
-    position: fixed;
+    position: absolute;
 
-    top: 50%;
+    top: calc(100% + 15px);
     left: 50%;
 
-    width: 520px;
-    max-width: calc(100vw - 40px);
+    width: 390px;
 
-    padding: 28px;
+    padding: 20px;
+
+    box-sizing: border-box;
 
     background:
         linear-gradient(
@@ -2579,15 +2584,15 @@ footer {
         );
 
     border: 1px solid #22d3ee;
-    border-radius: 16px;
+    border-radius: 14px;
 
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.65),
-        0 0 40px rgba(34, 211, 238, 0.08);
+        0 25px 60px rgba(0, 0, 0, 0.65),
+        0 0 30px rgba(34, 211, 238, 0.08);
 
     transform:
-        translate(-50%, -50%)
-        scale(0.96);
+        translateX(-50%)
+        translateY(-8px);
 
     opacity: 0;
     visibility: hidden;
@@ -2598,28 +2603,33 @@ footer {
         transform 0.25s ease,
         visibility 0.25s ease;
 
-    z-index: 9999;
-
-    box-sizing: border-box;
+    z-index: 99999;
 }
 
-/* Saat RHV dibuka */
+
+/* OPEN */
+
 .infra-rhv.rhv-open .rhv-expand-panel {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 
     transform:
-        translate(-50%, -50%)
-        scale(1);
+        translateX(-50%)
+        translateY(0);
 }
 
+
 /* =========================================
-   PANEL TITLE
+   TITLE
 ========================================= */
 
 .rhv-expand-title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #1e293b;
 
     color: #22d3ee;
 
@@ -2628,29 +2638,27 @@ footer {
     font-weight: 700;
 
     letter-spacing: 2px;
-
-    padding-bottom: 14px;
-
-    border-bottom: 1px solid #1e293b;
 }
 
+
 /* =========================================
-   COMPONENT ITEMS
+   ITEMS
 ========================================= */
 
 .rhv-expand-item {
     display: flex;
     align-items: center;
-    gap: 16px;
 
-    padding: 16px;
+    gap: 14px;
 
-    margin-bottom: 10px;
+    padding: 13px;
+
+    margin-bottom: 8px;
 
     background: #0b1120;
 
     border: 1px solid #1e293b;
-    border-radius: 10px;
+    border-radius: 9px;
 
     transition:
         border-color 0.2s ease,
@@ -2670,10 +2678,12 @@ footer {
     transform: translateX(4px);
 }
 
-/* Number */
+
+/* NUMBER */
+
 .rhv-expand-item span {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
     align-items: center;
@@ -2684,7 +2694,7 @@ footer {
     background: #111827;
 
     border: 1px solid #334155;
-    border-radius: 8px;
+    border-radius: 7px;
 
     color: #22d3ee;
 
@@ -2693,37 +2703,25 @@ footer {
     font-weight: 700;
 }
 
-/* Text */
+
+/* TEXT */
+
 .rhv-expand-item strong {
     color: #f8fafc;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 
+
 /* =========================================
-   BACKDROP
+   TOPOLOGY MUST ALLOW OVERLAY
 ========================================= */
 
-.rhv-expand-panel::before {
-    content: "";
-
-    position: fixed;
-
-    top: 50%;
-    left: 50%;
-
-    width: 100vw;
-    height: 100vh;
-
-    transform: translate(-50%, -50%);
-
-    background: rgba(2, 6, 23, 0.55);
-
-    z-index: -1;
-
-    pointer-events: none;
+.infra-topology {
+    overflow: visible;
 }
+
 
 /* =========================================
    MOBILE
@@ -2732,12 +2730,8 @@ footer {
 @media (max-width: 600px) {
 
     .rhv-expand-panel {
-        width: calc(100vw - 30px);
-        padding: 20px;
-    }
-
-    .rhv-expand-item {
-        padding: 13px;
+        width: 320px;
+        max-width: calc(100vw - 40px);
     }
 
 }
