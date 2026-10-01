@@ -2251,7 +2251,7 @@ footer {
 ========================= */
 
 .infra-zabbix {
-    width: 450px;
+    width: 430px;
 
     top: 250px;
     left: 50%;
@@ -2268,7 +2268,7 @@ footer {
 ========================= */
 
 .infra-alert {
-    width: 300px;
+    width: 280px;
 
     top: 250px;
     left: 20px;
@@ -2280,7 +2280,7 @@ footer {
 ========================= */
 
 .infra-database {
-    width: 300px;
+    width: 280px;
 
     top: 250px;
     right: 20px;
@@ -2292,7 +2292,7 @@ footer {
 ========================= */
 
 .infra-telegram {
-    width: 300px;
+    width: 280px;
 
     top: 465px;
     left: 20px;
@@ -2304,7 +2304,7 @@ footer {
 ========================= */
 
 .infra-grafana {
-    width: 450px;
+    width: 430px;
 
     top: 465px;
     left: 50%;
