@@ -1167,7 +1167,7 @@ footer {
 
 /* Section pertama lebih dekat ke header */
 .project-section:first-child {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 /* =========================================
@@ -1191,8 +1191,8 @@ footer {
 @media (max-width: 768px) {
 
     .project-header {
-        padding-top: 100px;
-        padding-bottom: 40px;
+        padding-top: 120px;
+        padding-bottom: 25px;
     }
 
     .project-header .container,
