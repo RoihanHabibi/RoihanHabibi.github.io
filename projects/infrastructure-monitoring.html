@@ -179,148 +179,421 @@
         Infrastructure Architecture
     </h2>
 
+    <p class="architecture-intro">
+        The architecture below shows how infrastructure metrics
+        are collected, visualized and processed through the
+        monitoring and alerting workflow.
+    </p>
 
-    <div class="infra-architecture">
+
+    <div class="infra-topology">
 
 
-        <!-- 01 -->
+        <!-- =========================
+             SVG CONNECTION LAYER
+        ========================== -->
 
-        <div class="infra-architecture-card">
+        <svg
+            class="infra-connections"
+            viewBox="0 0 1000 900"
+            preserveAspectRatio="none"
+        >
 
-            <div class="infra-architecture-number">
+            <!-- RHV → ZABBIX -->
+
+            <path
+                class="infra-line"
+                d="M500 125 L500 245"
+            />
+
+            <path
+                class="infra-line"
+                d="M500 350 L500 470"
+            />
+
+            <!-- ZABBIX → DATABASE -->
+
+            <path
+                class="infra-line"
+                d="M550 300 L790 300"
+            />
+
+            <!-- ZABBIX → ALERTING -->
+
+            <path
+                class="infra-line"
+                d="M450 300 L210 300"
+            />
+
+            <!-- ALERTING → TELEGRAM -->
+
+            <path
+                class="infra-line"
+                d="M210 365 L210 485"
+            />
+
+            <!-- GRAFANA → WEB -->
+
+            <path
+                class="infra-line"
+                d="M500 575 L500 700"
+            />
+
+
+            <!-- =========================
+                 MOVING PACKETS
+            ========================== -->
+
+            <!-- RHV → ZABBIX -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2s"
+                    repeatCount="indefinite"
+                    path="M500 125 L500 245"
+                />
+            </circle>
+
+
+            <!-- ZABBIX → GRAFANA -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2s"
+                    begin="0.5s"
+                    repeatCount="indefinite"
+                    path="M500 350 L500 470"
+                />
+            </circle>
+
+
+            <!-- ZABBIX → DATABASE -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2.2s"
+                    begin="0.3s"
+                    repeatCount="indefinite"
+                    path="M550 300 L790 300"
+                />
+            </circle>
+
+
+            <!-- ZABBIX → ALERTING -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2.2s"
+                    begin="1s"
+                    repeatCount="indefinite"
+                    path="M450 300 L210 300"
+                />
+            </circle>
+
+
+            <!-- ALERTING → TELEGRAM -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2s"
+                    begin="1.5s"
+                    repeatCount="indefinite"
+                    path="M210 365 L210 485"
+                />
+            </circle>
+
+
+            <!-- GRAFANA → WEB -->
+
+            <circle class="infra-packet">
+                <animateMotion
+                    dur="2s"
+                    begin="0.8s"
+                    repeatCount="indefinite"
+                    path="M500 575 L500 700"
+                />
+            </circle>
+
+        </svg>
+
+
+        <!-- =========================
+             RHV
+        ========================== -->
+
+        <div class="infra-node infra-rhv">
+
+            <div class="infra-node-number">
                 01
             </div>
 
-            <div class="infra-architecture-content">
+            <div>
 
                 <h3>
                     RHV / Virtual Infrastructure
                 </h3>
 
                 <p>
-                    Virtual infrastructure hosting the monitored
-                    workloads and services.
+                    Virtual machines and infrastructure workloads
+                    running on Red Hat Virtualization.
                 </p>
 
+                <div class="infra-tags">
+
+                    <span>
+                        RHV
+                    </span>
+
+                    <span>
+                        VM
+                    </span>
+
+                    <span>
+                        HOST
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
 
 
-        <div class="infra-architecture-arrow">
-            ↓
-        </div>
+        <!-- =========================
+             ZABBIX
+        ========================== -->
 
+        <div class="infra-node infra-zabbix">
 
-        <!-- 02 -->
-
-        <div class="infra-architecture-card">
-
-            <div class="infra-architecture-number">
-                02
+            <div class="infra-node-icon">
+                Z
             </div>
 
-            <div class="infra-architecture-content">
+            <div>
 
                 <h3>
                     Zabbix Monitoring
                 </h3>
 
                 <p>
-                    Collects infrastructure metrics including
-                    availability, CPU, memory, storage and network data.
+                    Infrastructure data collection,
+                    monitoring and trigger processing.
                 </p>
 
+                <div class="infra-tags">
+
+                    <span>
+                        ITEMS
+                    </span>
+
+                    <span>
+                        TRIGGERS
+                    </span>
+
+                    <span>
+                        ALERTS
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
 
 
-        <div class="infra-architecture-arrow">
-            ↓
+        <!-- =========================
+             ALERTING
+        ========================== -->
+
+        <div class="infra-node infra-alert">
+
+            <div class="infra-side-icon">
+                !
+            </div>
+
+            <div>
+
+                <h3>
+                    Alerting System
+                </h3>
+
+                <p>
+                    Processes monitoring events and
+                    notification conditions.
+                </p>
+
+                <div class="infra-tags">
+
+                    <span>
+                        TRIGGER
+                    </span>
+
+                    <span>
+                        PYTHON
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
 
 
-        <!-- 03 -->
+        <!-- =========================
+             DATABASE
+        ========================== -->
 
-        <div class="infra-architecture-card">
+        <div class="infra-node infra-database">
 
-            <div class="infra-architecture-number">
-                03
+            <div class="infra-side-icon">
+                DB
             </div>
 
-            <div class="infra-architecture-content">
+            <div>
+
+                <h3>
+                    Monitoring Database
+                </h3>
+
+                <p>
+                    Stores monitoring history,
+                    events and infrastructure data.
+                </p>
+
+                <div class="infra-tags">
+
+                    <span>
+                        HISTORY
+                    </span>
+
+                    <span>
+                        EVENTS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             GRAFANA
+        ========================== -->
+
+        <div class="infra-node infra-grafana">
+
+            <div class="infra-node-icon grafana-icon">
+                G
+            </div>
+
+            <div>
 
                 <h3>
                     Grafana Visualization
                 </h3>
 
                 <p>
-                    Provides centralized dashboards for infrastructure
+                    Centralized dashboards for infrastructure
                     performance and resource utilization.
                 </p>
 
-            </div>
+                <div class="infra-tags">
 
-        </div>
+                    <span>
+                        REALTIME
+                    </span>
 
+                    <span>
+                        GRAPHS
+                    </span>
 
-        <div class="infra-architecture-arrow">
-            ↓
-        </div>
+                    <span>
+                        TRENDS
+                    </span>
 
-
-        <!-- 04 -->
-
-        <div class="infra-architecture-card">
-
-            <div class="infra-architecture-number">
-                04
-            </div>
-
-            <div class="infra-architecture-content">
-
-                <h3>
-                    Python Monitoring & Alerting
-                </h3>
-
-                <p>
-                    Processes monitoring events and handles
-                    notification logic based on defined conditions.
-                </p>
+                </div>
 
             </div>
 
         </div>
 
 
-        <div class="infra-architecture-arrow">
-            ↓
-        </div>
+        <!-- =========================
+             TELEGRAM
+        ========================== -->
 
+        <div class="infra-node infra-telegram">
 
-        <!-- 05 -->
-
-        <div class="infra-architecture-card">
-
-            <div class="infra-architecture-number">
-                05
+            <div class="infra-side-icon">
+                TG
             </div>
 
-            <div class="infra-architecture-content">
+            <div>
 
                 <h3>
                     Telegram Notification
                 </h3>
 
                 <p>
-                    Delivers infrastructure alerts and operational
-                    notifications through Telegram.
+                    Sends infrastructure alerts when
+                    defined monitoring conditions are detected.
                 </p>
+
+                <div class="infra-tags">
+
+                    <span>
+                        ALERT
+                    </span>
+
+                    <span>
+                        TELEGRAM
+                    </span>
+
+                </div>
 
             </div>
 
         </div>
+
+
+        <!-- =========================
+             WEB ACCESS
+        ========================== -->
+
+        <div class="infra-node infra-web">
+
+            <div class="infra-side-icon">
+                WEB
+            </div>
+
+            <div>
+
+                <h3>
+                    Web Access
+                </h3>
+
+                <p>
+                    Access monitoring dashboards and
+                    infrastructure status through a browser.
+                </p>
+
+                <div class="infra-tags">
+
+                    <span>
+                        DASHBOARD
+                    </span>
+
+                    <span>
+                        STATUS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
     </div>
 
