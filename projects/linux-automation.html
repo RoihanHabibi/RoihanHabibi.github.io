@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Linux Server Automation | Roihan Habibi
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            RH<span>.</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- PROJECT HEADER -->
+
+    <section class="project-detail">
+
+        <p class="section-label">
+            PROJECT 03 — AUTOMATION
+        </p>
+
+        <h1>
+            Linux Server
+            <span>Automation</span>
+        </h1>
+
+        <p class="project-intro">
+
+            Linux server automation environment designed to
+            simplify repetitive server administration tasks
+            through centralized Ansible automation.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>
+                Linux
+            </span>
+
+            <span>
+                Ansible
+            </span>
+
+            <span>
+                SSH
+            </span>
+
+            <span>
+                Playbook
+            </span>
+
+            <span>
+                Inventory
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OVERVIEW -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            Project Overview
+        </h2>
+
+        <p>
+
+            This project focuses on automating Linux server
+            administration using Ansible. A centralized control
+            node is used to manage Linux servers through
+            SSH-based communication and reusable playbooks.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- PROBLEM -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            02 — PROBLEM
+        </p>
+
+        <h2>
+            Problem
+        </h2>
+
+        <p>
+
+            Repetitive server administration tasks can require
+            significant manual effort when performed individually
+            across multiple Linux systems.
+
+        </p>
+
+        <p>
+
+            The goal of this project was to centralize server
+            configuration and automate repetitive operational
+            tasks using Ansible.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ARCHITECTURE -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            03 — ARCHITECTURE
+        </p>
+
+        <h2>
+            Automation Architecture
+        </h2>
+
+
+        <!-- LINUX AUTOMATION TOPOLOGY -->
+
+        <div class="linux-topology">
+
+
+            <!-- CONNECTIONS -->
+
+            <svg
+                class="linux-connections"
+                viewBox="0 0 1100 900"
+                preserveAspectRatio="none"
+            >
+
+                <!-- CONTROL NODE → SSH -->
+
+                <path
+                    class="linux-line"
+                    d="M550 220 V300"
+                />
+
+
+                <!-- MAIN BRANCH -->
+
+                <path
+                    class="linux-line"
+                    d="M550 350 H200 V425"
+                />
+
+                <path
+                    class="linux-line"
+                    d="M550 350 V425"
+                />
+
+                <path
+                    class="linux-line"
+                    d="M550 350 H900 V425"
+                />
+
+
+                <!-- SERVER → RESULT -->
+
+                <path
+                    class="linux-line"
+                    d="M200 650 V720 H550"
+                />
+
+                <path
+                    class="linux-line"
+                    d="M550 650 V720"
+                />
+
+                <path
+                    class="linux-line"
+                    d="M900 650 V720 H550"
+                />
+
+                <path
+                    class="linux-line"
+                    d="M550 720 V785"
+                />
+
+
+                <!-- PACKETS -->
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="2.5s"
+                        repeatCount="indefinite"
+                        path="M550 220 V300"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3s"
+                        repeatCount="indefinite"
+                        path="M550 350 H200 V425"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3s"
+                        repeatCount="indefinite"
+                        path="M550 350 V425"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3s"
+                        repeatCount="indefinite"
+                        path="M550 350 H900 V425"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3.5s"
+                        repeatCount="indefinite"
+                        path="M200 650 V720 H550 V785"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3.5s"
+                        repeatCount="indefinite"
+                        path="M550 650 V785"
+                    />
+                </circle>
+
+
+                <circle
+                    class="linux-packet"
+                    r="6"
+                >
+                    <animateMotion
+                        dur="3.5s"
+                        repeatCount="indefinite"
+                        path="M900 650 V720 H550 V785"
+                    />
+                </circle>
+
+            </svg>
+
+
+
+            <!-- ANSIBLE CONTROL NODE -->
+
+            <div class="linux-node linux-control">
+
+                <div class="linux-icon ansible-icon">
+                    A
+                </div>
+
+                <div class="linux-node-content">
+
+                    <h3>
+                        Ansible Control Node
+                    </h3>
+
+                    <p>
+                        Centralized automation server
+                        managing multiple Linux systems.
+                    </p>
+
+                    <div class="linux-tags">
+
+                        <span>
+                            ANSIBLE
+                        </span>
+
+                        <span>
+                            PLAYBOOK
+                        </span>
+
+                        <span>
+                            INVENTORY
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SSH LABEL -->
+
+            <div class="linux-ssh">
+
+                <span class="linux-lock">
+                    SSH
+                </span>
+
+                <strong>
+                    SSH / ANSIBLE
+                </strong>
+
+            </div>
+
+
+
+            <!-- SERVER 01 -->
+
+            <div class="linux-server linux-server-01">
+
+                <div class="server-visual">
+
+                    <div class="server-rack">
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                    <span class="server-status">
+                    </span>
+
+                </div>
+
+
+                <div class="linux-server-content">
+
+                    <h3>
+                        Linux Server 01
+                    </h3>
+
+                    <strong>
+                        Web Server
+                    </strong>
+
+                    <p>
+                        Nginx, PHP and application services.
+                    </p>
+
+                    <div class="linux-tags">
+
+                        <span>
+                            NGINX
+                        </span>
+
+                        <span>
+                            PHP
+                        </span>
+
+                        <span>
+                            APP
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVER 02 -->
+
+            <div class="linux-server linux-server-02">
+
+                <div class="server-visual">
+
+                    <div class="server-rack">
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                    <span class="server-status">
+                    </span>
+
+                </div>
+
+
+                <div class="linux-server-content">
+
+                    <h3>
+                        Linux Server 02
+                    </h3>
+
+                    <strong>
+                        Database Server
+                    </strong>
+
+                    <p>
+                        MySQL and database services.
+                    </p>
+
+                    <div class="linux-tags">
+
+                        <span>
+                            MYSQL
+                        </span>
+
+                        <span>
+                            DB
+                        </span>
+
+                        <span>
+                            BACKUP
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVER 03 -->
+
+            <div class="linux-server linux-server-03">
+
+                <div class="server-visual">
+
+                    <div class="server-rack">
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="server-unit">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                    <span class="server-status">
+                    </span>
+
+                </div>
+
+
+                <div class="linux-server-content">
+
+                    <h3>
+                        Linux Server 03
+                    </h3>
+
+                    <strong>
+                        Monitoring Server
+                    </strong>
+
+                    <p>
+                        Zabbix agent and system log monitoring.
+                    </p>
+
+                    <div class="linux-tags">
+
+                        <span>
+                            ZABBIX
+                        </span>
+
+                        <span>
+                            LOGS
+                        </span>
+
+                        <span>
+                            AGENT
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONFIGURATION RESULT -->
+
+            <div class="linux-result">
+
+                <div class="result-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h3>
+                        Configuration Result
+                    </h3>
+
+                    <p>
+                        Automated configuration, package
+                        installation, service management
+                        and system administration.
+                    </p>
+
+                    <div class="linux-tags">
+
+                        <span>
+                            AUTOMATED
+                        </span>
+
+                        <span>
+                            CONSISTENT
+                        </span>
+
+                        <span>
+                            SCALABLE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AUTOMATION WORKFLOW -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            04 — AUTOMATION WORKFLOW
+        </p>
+
+        <h2>
+            Automation Workflow
+        </h2>
+
+
+        <div class="implementation-grid">
+
+
+            <div class="implementation-card">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Inventory
+                </h3>
+
+                <p>
+                    Define managed Linux servers and
+                    connection parameters inside the
+                    Ansible inventory.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Playbook
+                </h3>
+
+                <p>
+                    Create reusable playbooks containing
+                    the desired server configuration and
+                    operational tasks.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    SSH Execution
+                </h3>
+
+                <p>
+                    Ansible connects to managed Linux
+                    servers through SSH and executes
+                    defined tasks.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Configuration
+                </h3>
+
+                <p>
+                    Server configuration tasks are
+                    executed consistently across the
+                    managed environment.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            05 — RESULT
+        </p>
+
+        <h2>
+            What I Built
+        </h2>
+
+        <p>
+
+            Built a centralized Linux server automation
+            workflow using Ansible, allowing repetitive
+            administration tasks to be executed through
+            reusable playbooks instead of manual
+            configuration on individual servers.
+
+        </p>
+
+
+        <div class="implementation-grid">
+
+
+            <div class="implementation-card">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Centralized Automation
+                </h3>
+
+                <p>
+                    Managed Linux infrastructure from a
+                    centralized Ansible control node.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Reusable Playbooks
+                </h3>
+
+                <p>
+                    Used structured playbooks to define
+                    repeatable server administration tasks.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    SSH-Based Management
+                </h3>
+
+                <p>
+                    Connected to managed Linux servers
+                    using SSH for remote automation.
+                </p>
+
+            </div>
+
+
+            <div class="implementation-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Consistent Configuration
+                </h3>
+
+                <p>
+                    Reduced repetitive manual configuration
+                    by applying defined tasks consistently.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TECHNOLOGIES -->
+
+    <section class="project-section">
+
+        <p class="section-label">
+            06 — TECHNOLOGIES
+        </p>
+
+        <h2>
+            Technologies Used
+        </h2>
+
+
+        <div class="tech-grid">
+
+            <span>
+                Linux
+            </span>
+
+            <span>
+                Ansible
+            </span>
+
+            <span>
+                SSH
+            </span>
+
+            <span>
+                Ansible Playbook
+            </span>
+
+            <span>
+                YAML
+            </span>
+
+            <span>
+                Server Administration
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <section class="project-back">
+
+        <a href="../index.html#projects">
+            ← Back to Projects
+        </a>
+
+    </section>
+
+
+
+    <footer>
+
+        © 2026 Roihan Habibi
+
+    </footer>
+
+
+
+</body>
+
+</html>

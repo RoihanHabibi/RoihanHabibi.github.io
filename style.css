@@ -1645,3 +1645,991 @@ collision anymore.
     }
 
 }
+
+/* =========================================================
+   PROJECT 03 — LINUX SERVER AUTOMATION
+   ANSIBLE + LINUX SERVER TOPOLOGY
+========================================================= */
+
+.linux-topology {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 900px;
+    margin: 50px auto 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(34, 211, 238, 0.04),
+            transparent 65%
+        );
+
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* GRID BACKGROUND */
+
+.linux-topology::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(34, 211, 238, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(34, 211, 238, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 32px 32px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONNECTIONS
+========================================================= */
+
+.linux-connections {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+.linux-line {
+    fill: none;
+
+    stroke: #22d3ee;
+    stroke-width: 1.5;
+
+    stroke-dasharray: 6 8;
+
+    opacity: 0.65;
+
+    filter:
+        drop-shadow(
+            0 0 4px rgba(34, 211, 238, 0.5)
+        );
+
+    animation:
+        linuxLineFlow 1.5s linear infinite;
+}
+
+
+@keyframes linuxLineFlow {
+
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -28;
+    }
+
+}
+
+
+/* =========================================================
+   PACKETS
+========================================================= */
+
+.linux-packet {
+    fill: #22d3ee;
+
+    filter:
+        drop-shadow(0 0 5px #22d3ee)
+        drop-shadow(0 0 12px #22d3ee);
+}
+
+
+/* =========================================================
+   GENERAL NODE
+========================================================= */
+
+.linux-node,
+.linux-server,
+.linux-result {
+
+    position: absolute;
+
+    z-index: 3;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111827,
+            #0b1120
+        );
+
+    border: 1px solid #29415e;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.linux-node:hover,
+.linux-server:hover,
+.linux-result:hover {
+
+    border-color: #22d3ee;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(34, 211, 238, 0.08);
+
+}
+
+
+/* =========================================================
+   ANSIBLE CONTROL NODE
+========================================================= */
+
+.linux-control {
+
+    top: 45px;
+    left: 50%;
+
+    width: 470px;
+    min-height: 150px;
+
+    transform:
+        translateX(-50%);
+
+    display: grid;
+
+    grid-template-columns:
+        62px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 24px 28px;
+
+    border-color: #22d3ee;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f1c2e,
+            #0b1120
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(34, 211, 238, 0.07);
+}
+
+
+.linux-control:hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-5px);
+
+}
+
+
+/* =========================================================
+   ANSIBLE ICON
+========================================================= */
+
+.linux-icon {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.ansible-icon {
+
+    color: #ffffff;
+
+    background:
+        #dc2626;
+
+    border:
+        1px solid #ef4444;
+
+    box-shadow:
+        0 0 20px
+        rgba(220, 38, 38, 0.25);
+}
+
+
+/* =========================================================
+   NODE CONTENT
+========================================================= */
+
+.linux-node-content h3,
+.linux-server-content h3,
+.linux-result h3 {
+
+    margin:
+        0 0 7px;
+
+    color:
+        #f8fafc;
+
+    font-size:
+        17px;
+}
+
+
+.linux-node-content p,
+.linux-server-content p,
+.linux-result p {
+
+    margin: 0;
+
+    color:
+        #94a3b8;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.linux-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    margin-top:
+        14px;
+}
+
+
+.linux-tags span {
+
+    padding:
+        5px 8px;
+
+    background:
+        #111827;
+
+    border:
+        1px solid #1e293b;
+
+    border-radius:
+        5px;
+
+    color:
+        #64748b;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.5px;
+}
+
+
+/* =========================================================
+   SSH BADGE
+========================================================= */
+
+.linux-ssh {
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    top:
+        275px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        7px 13px;
+
+    background:
+        #0b1120;
+
+    border:
+        1px solid #22d3ee;
+
+    border-radius:
+        7px;
+
+    box-shadow:
+        0 0 15px
+        rgba(34, 211, 238, 0.08);
+}
+
+
+.linux-lock {
+
+    color:
+        #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.linux-ssh strong {
+
+    color:
+        #e2e8f0;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =========================================================
+   SERVER CARDS
+========================================================= */
+
+.linux-server {
+
+    top:
+        425px;
+
+    width:
+        290px;
+
+    min-height:
+        190px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        72px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        17px;
+
+    padding:
+        22px;
+
+}
+
+
+.linux-server-01 {
+
+    left:
+        35px;
+}
+
+
+.linux-server-02 {
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.linux-server-03 {
+
+    right:
+        35px;
+}
+
+
+.linux-server-02:hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-5px);
+
+}
+
+
+.linux-server-content strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        #22d3ee;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =========================================================
+   SERVER RACK ICON
+========================================================= */
+
+.server-visual {
+
+    position:
+        relative;
+
+    width:
+        65px;
+
+    height:
+        110px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.server-rack {
+
+    width:
+        58px;
+
+    padding:
+        6px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1e293b,
+            #0f172a
+        );
+
+    border:
+        1px solid #475569;
+
+    border-radius:
+        6px;
+
+    box-shadow:
+        inset 0 0 15px
+        rgba(0, 0, 0, 0.6),
+
+        0 0 15px
+        rgba(34, 211, 238, 0.06);
+}
+
+
+.server-unit {
+
+    position:
+        relative;
+
+    height:
+        25px;
+
+    margin:
+        3px 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+    padding:
+        0 5px;
+
+    background:
+        #111827;
+
+    border:
+        1px solid #334155;
+
+    border-radius:
+        3px;
+}
+
+
+.server-unit::before {
+
+    content:
+        "";
+
+    width:
+        25px;
+
+    height:
+        2px;
+
+    background:
+        #334155;
+
+    border-radius:
+        2px;
+}
+
+
+.server-unit i {
+
+    display:
+        block;
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        #22d3ee;
+
+    box-shadow:
+        0 0 5px
+        #22d3ee;
+
+    animation:
+        serverLed 1.5s ease-in-out infinite;
+}
+
+
+.server-unit i:nth-child(2) {
+
+    animation-delay:
+        0.3s;
+}
+
+
+.server-unit i:nth-child(3) {
+
+    animation-delay:
+        0.6s;
+}
+
+
+@keyframes serverLed {
+
+    0%,
+    100% {
+
+        opacity:
+            0.45;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        box-shadow:
+            0 0 8px
+            #22d3ee;
+
+    }
+
+}
+
+
+/* =========================================================
+   SERVER ONLINE INDICATOR
+========================================================= */
+
+.server-status {
+
+    position:
+        absolute;
+
+    top:
+        3px;
+
+    right:
+        0;
+
+    width:
+        11px;
+
+    height:
+        11px;
+
+    border-radius:
+        50%;
+
+    background:
+        #22c55e;
+
+    border:
+        2px solid #0b1120;
+
+    box-shadow:
+        0 0 8px
+        rgba(34, 197, 94, 0.8);
+
+    animation:
+        serverStatusPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes serverStatusPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            0.6;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        box-shadow:
+            0 0 14px
+            rgba(34, 197, 94, 0.9);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONFIGURATION RESULT
+========================================================= */
+
+.linux-result {
+
+    left:
+        50%;
+
+    bottom:
+        35px;
+
+    width:
+        500px;
+
+    min-height:
+        120px;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        55px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        22px 25px;
+
+    border-color:
+        #22d3ee;
+}
+
+
+.linux-result:hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-5px);
+
+}
+
+
+.result-icon {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        #111827;
+
+    border:
+        1px solid #22d3ee;
+
+    color:
+        #22d3ee;
+
+    font-size:
+        24px;
+
+    box-shadow:
+        0 0 15px
+        rgba(34, 211, 238, 0.08);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .linux-topology {
+
+        height:
+            auto;
+
+        padding:
+            25px;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            20px;
+
+        overflow:
+            hidden;
+    }
+
+
+    .linux-connections {
+
+        display:
+            none;
+    }
+
+
+    .linux-control,
+    .linux-server,
+    .linux-result,
+    .linux-ssh {
+
+        position:
+            relative;
+
+        top:
+            auto;
+
+        left:
+            auto;
+
+        right:
+            auto;
+
+        bottom:
+            auto;
+
+        width:
+            100%;
+
+        min-height:
+            0;
+
+        transform:
+            none;
+    }
+
+
+    .linux-control {
+
+        grid-template-columns:
+            58px 1fr;
+    }
+
+
+    .linux-server {
+
+        grid-template-columns:
+            72px 1fr;
+    }
+
+
+    .linux-server-02 {
+
+        transform:
+            none;
+    }
+
+
+    .linux-control:hover,
+    .linux-server-02:hover,
+    .linux-result:hover {
+
+        transform:
+            translateY(-4px);
+    }
+
+
+    .linux-ssh {
+
+        align-self:
+            center;
+
+        width:
+            fit-content;
+
+        transform:
+            none;
+    }
+
+
+    .linux-result {
+
+        grid-template-columns:
+            55px 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .linux-topology {
+
+        padding:
+            15px;
+    }
+
+
+    .linux-control,
+    .linux-server,
+    .linux-result {
+
+        padding:
+            18px;
+    }
+
+
+    .linux-server {
+
+        grid-template-columns:
+            60px 1fr;
+
+        gap:
+            12px;
+    }
+
+
+    .server-visual {
+
+        transform:
+            scale(0.9);
+    }
+
+}
